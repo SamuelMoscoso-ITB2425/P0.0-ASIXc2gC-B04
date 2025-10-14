@@ -7,14 +7,6 @@
 
 ## Índice
 
-1. [Descripción del Proyecto](#descripción-del-proyecto)
-2. [Objetivos](#objetivos)
-3. [Requisitos](#requisitos)
-4. [Planificación y Sprints](#planificación-y-sprints)
-5. [Arquitectura de la Infraestructura](#arquitectura-de-la-infraestructura)
-6. [Desglose de Responsabilidades](#desglose-de-responsabilidades)
-7. [Documentación y Control de Versiones](#documentación-y-control-de-versiones)
-8. [Autores](#autores)
 
 ---
 
@@ -32,18 +24,6 @@ Este proyecto consiste en el despliegue, configuración y documentación de una 
 - Garantizar acceso con usuario común: `bchecker` / `bchecker121` en todos los sistemas y servicios.
 - Documentar todo el proceso y mantener el control de versiones con Git.
 - Desplegar y probar la conectividad y acceso desde clientes Linux y Windows.
-
----
-
-## Requisitos
-
-- **Planificación en Proofhub** con sprints quinzenales (10h cada uno, 3 sprints).
-- **Repositorio GitHub** con la nomenclatura: `P0.0-ASIXc2gC-Gnn`.
-- **Diagrama de arquitectura** actualizado en la documentación.
-- **Configuración y documentación** de todos los servicios, accesibles con usuario `bchecker`.
-- **Control de versiones Git** (ADD/PUSH/PULL/CLONE/COMMIT).
-- **Documentación Markdown** organizada y clara.
-- **Aplicación de prueba** que muestre datos reales desde la BBDD.
 
 ---
 
