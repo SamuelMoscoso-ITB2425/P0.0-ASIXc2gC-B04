@@ -23,16 +23,17 @@
 
 | Comando | Descripción |
 |----------|-------------|
-| `ip a` | Muestra la configuración de todas las interfaces de red. |
-| `sudo nano /etc/netplan/00-installer-config.yaml` | Abre el archivo de configuración de red para editarlo. |
-| `sudo netplan apply` | Aplica los cambios realizados en la configuración de red. |
-| `net.ipv4.ip_forward=1` | Activa el reenvío de paquetes IPv4 (permite que el servidor actúe como router). |
-| `sudo sysctl -p` | Recarga las configuraciones del sistema sin reiniciar. |
-| `sudo iptables -t nat -A POSTROUTING -s 192.168.50.0/24 -o enp1s0 -j MASQUERADE` | Aplica una regla de NAT que permite a la red interna salir a Internet. |
-| `sudo apt install iptables-persistent` | Instala la herramienta que guarda las reglas de iptables al reiniciar. |
-| `sudo netfilter-persistent save` | Guarda las reglas actuales de iptables de forma permanente. |
+| `ip a` | Muestra la configuración de las interfaces de red. |
+| `sudo nano /etc/netplan/00-installer-config.yaml` | Edita el archivo de configuración de red. |
+| `sudo netplan apply` | Aplica los cambios realizados en la red. |
+| `net.ipv4.ip_forward=1` | Activa el reenvío de paquetes IPv4. |
+| `sudo sysctl -p` | Aplica los cambios del sistema sin reiniciar. |
+| `sudo iptables -t nat -A POSTROUTING -s 192.168.50.0/24 -o enp1s0 -j MASQUERADE` | Configura NAT para que los equipos de la red interna salgan a Internet. |
+| `sudo apt install iptables-persistent` | Instala el paquete que permite guardar reglas de iptables. |
+| `sudo netfilter-persistent save` | Guarda las reglas configuradas de iptables. |
 
-💡 **Consejo:** Los usuarios deben tener como *gateway* la IP del servidor para enrutar correctamente su tráfico.
+💡 **Importante:**  
+Los clientes deben tener configurada como *gateway* la IP del servidor para que el tráfico se enrute correctamente.
 
 ---
 
@@ -40,14 +41,14 @@
 
 | Comando | Descripción |
 |----------|-------------|
-| `sudo useradd -m -s /bin/bash bchecker` | Crea el usuario **bchecker** con su carpeta personal. |
-| `sudo passwd bchecker` | Asigna la contraseña del usuario (`bchecker121`). |
-| `echo "bchecker:bchecker121" | sudo chpasswd` | Crea y asigna la contraseña al usuario directamente. |
-| `sudo mkdir -p /home/bchecker/.ssh` | Crea el directorio `.ssh` del usuario si no existe. |
+| `sudo useradd -m -s /bin/bash bchecker` | Crea el usuario **bchecker** con su directorio personal. |
+| `sudo passwd bchecker` | Asigna la contraseña `bchecker121` al usuario. |
+| `echo "bchecker:bchecker121" | sudo chpasswd` | Crea y asigna la contraseña al usuario de forma directa. |
+| `sudo mkdir -p /home/bchecker/.ssh` | Crea el directorio `.ssh` dentro del home del usuario. |
 
-🔧 **Notas adicionales:**
-- Este usuario se crea en **todas las máquinas** del proyecto.
-- Se utiliza como usuario común de acceso y gestión (`bchecker / bchecker121`).
+💬 **Notas:**
+- Este usuario se crea en **todas las máquinas**.  
+- Es el usuario común para el acceso a los servicios (`bchecker / bchecker121`).
 
 ---
 
@@ -57,18 +58,18 @@
 
 | Comando | Descripción |
 |----------|-------------|
-| `ssh-keygen -t rsa -b 4096 -C "correo@itb.cat"` | Genera una nueva clave SSH RSA de 4096 bits. |
+| `ssh-keygen -t rsa -b 4096 -C "correo@itb.cat"` | Genera una clave SSH RSA de 4096 bits. |
 | `cat ~/.ssh/id_rsa.pub` | Muestra la clave pública generada. |
-| `sudo nano /home/bchecker/.ssh/authorized_keys` | Abre el archivo para añadir las claves públicas de los clientes. |
-| `sudo chown -R bchecker:bchecker /home/bchecker/.ssh` | Cambia la propiedad del directorio `.ssh` al usuario bchecker. |
-| `sudo chmod 700 /home/bchecker/.ssh` | Asigna permisos de acceso correctos al directorio. |
-| `sudo chmod 600 /home/bchecker/.ssh/authorized_keys` | Asegura que solo el usuario tenga acceso a sus claves. |
+| `sudo nano /home/bchecker/.ssh/authorized_keys` | Abre el archivo donde se guardan las claves públicas de los clientes. |
+| `sudo chown -R bchecker:bchecker /home/bchecker/.ssh` | Cambia la propiedad de la carpeta `.ssh`. |
+| `sudo chmod 700 /home/bchecker/.ssh` | Asigna permisos de acceso correctos a la carpeta. |
+| `sudo chmod 600 /home/bchecker/.ssh/authorized_keys` | Permite que solo el usuario lea sus claves. |
 
-🧠 **Proceso resumido:**
-1. Los clientes (Linux/Windows) generan su clave con `ssh-keygen`.
-2. Copian su clave pública y la envían al servidor.
-3. El servidor las añade al archivo `authorized_keys` del usuario `bchecker`.
-4. Con esto se puede acceder sin contraseña y de forma más segura.
+🧠 **Explicación rápida:**  
+1. Los clientes generan sus claves con `ssh-keygen`.  
+2. Copian la clave pública al servidor.  
+3. El servidor las añade al archivo `authorized_keys` del usuario `bchecker`.  
+4. Así se permite acceso por SSH sin contraseña y de forma más segura.
 
 ---
 
@@ -77,35 +78,36 @@
 | Comando | Descripción |
 |----------|-------------|
 | `sudo nano /etc/sysctl.conf` | Abre el archivo de configuración del sistema. |
-| `# net.ipv4.ip_forward = 1` → `net.ipv4.ip_forward = 1` | Se elimina el `#` para activar el reenvío IPv4. |
-| `sudo sysctl -p` | Aplica los cambios del archivo sysctl inmediatamente. |
-| `sudo iptables -t nat -A POSTROUTING -s 192.168.50.0/24 -o ens1 -j MASQUERADE` | Configura la red NAT para enrutar todo el tráfico saliente. |
+| `# net.ipv4.ip_forward = 1` → `net.ipv4.ip_forward = 1` | Activa el reenvío de paquetes IP eliminando el comentario. |
+| `sudo sysctl -p` | Aplica los cambios del archivo `sysctl.conf`. |
+| `sudo iptables -t nat -A POSTROUTING -s 192.168.50.0/24 -o ens1 -j MASQUERADE` | Enruta el tráfico saliente a través del servidor. |
 
-📘 **Explicación:**  
-Esto permite que el servidor funcione como **router**, redirigiendo tráfico entre redes internas y externas (Intranet ↔ Internet).
+📘 **Motivo:**  
+Permite que el servidor funcione como **router**, gestionando el tráfico entre las redes internas y externas.
 
 ---
 
 ## 🧱 Configuración de la DMZ
 
-> **DMZ (Zona Desmilitarizada):**  
-> Segmento de red que aloja servicios accesibles desde Internet, protegiendo la red interna.
+> **DMZ (Zona Desmilitarizada)**  
+> Área de red destinada a servicios accesibles desde Internet, aislada de la red interna.
 
-| Elemento | Descripción |
+| Servicio | Descripción |
 |-----------|-------------|
-| **Web** | Servidor accesible desde Internet (HTTP/HTTPS). |
-| **BBDD** | Base de datos del sistema (MySQL). |
-| **DNS** | Resolución de nombres de dominio. |
+| **Web** | Servidor web público. |
+| **BBDD** | Servidor de base de datos del proyecto. |
+| **DNS** | Servicio de resolución de nombres. |
 
-🔐 **Notas:**
-- Los servidores en la DMZ **no pueden acceder directamente a la red interna**.  
-- Su función es servir recursos públicos (web, DNS, FTP, etc.) sin exponer información sensible.
+💡 **Detalles:**
+- La **DMZ** permite que los servidores sean accesibles desde fuera sin comprometer la Intranet.  
+- No hay comunicación directa entre la DMZ y la red interna.  
+- La seguridad se basa en aislamiento y control de tráfico.
 
 ---
 
 ## 🗄️ Configuración de MySQL y base de datos
 
-### 🔹 Acceso a MySQL
+### 🔹 Acceso al monitor de MySQL
 
 ```bash
 sudo mysql
