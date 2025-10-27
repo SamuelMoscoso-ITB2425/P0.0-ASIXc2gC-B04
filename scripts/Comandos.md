@@ -6,108 +6,199 @@
 
 ---
 
-## 📑 Índice
-
-1. [Configuración de red y NAT](#configuración-de-red-y-nat)  
-2. [Creación y gestión de usuarios](#creación-y-gestión-de-usuarios)  
-3. [Configuración de claves SSH](#configuración-de-claves-ssh)  
-4. [Activación del reenvío de paquetes](#activación-del-reenvío-de-paquetes)  
-5. [Configuración de la DMZ](#configuración-de-la-dmz)  
-6. [Configuración de MySQL y base de datos](#configuración-de-mysql-y-base-de-datos)  
-7. [Resumen general](#resumen-general)  
-8. [Conclusión](#conclusión)
-
----
-
 ## 🌐 Configuración de red y NAT
 
-| Comando | Descripción |
-|----------|-------------|
-| `ip a` | Muestra la configuración de las interfaces de red. |
-| `sudo nano /etc/netplan/00-installer-config.yaml` | Edita el archivo de configuración de red. |
-| `sudo netplan apply` | Aplica los cambios realizados en la red. |
-| `net.ipv4.ip_forward=1` | Activa el reenvío de paquetes IPv4. |
-| `sudo sysctl -p` | Aplica los cambios del sistema sin reiniciar. |
-| `sudo iptables -t nat -A POSTROUTING -s 192.168.50.0/24 -o enp1s0 -j MASQUERADE` | Configura NAT para que los equipos de la red interna salgan a Internet. |
-| `sudo apt install iptables-persistent` | Instala el paquete que permite guardar reglas de iptables. |
-| `sudo netfilter-persistent save` | Guarda las reglas configuradas de iptables. |
+Configuración del servidor como router/NAT para permitir la salida a Internet desde la red interna.
 
-💡 **Importante:**  
-Los clientes deben tener configurada como *gateway* la IP del servidor para que el tráfico se enrute correctamente.
+```bash
+sudo nano /etc/sysctl.conf
+# Quitar el comentario en la siguiente línea:
+# net.ipv4.ip_forward = 1  →  net.ipv4.ip_forward = 1
+sudo sysctl -p
+sudo iptables -t nat -A POSTROUTING -s 192.168.50.0/24 -o ens1 -j MASQUERADE
+```
+
+💡 **Explicación corta:**  
+Activa el reenvío de paquetes y aplica una regla de NAT para que los equipos de la red `192.168.50.0/24` salgan a Internet a través del servidor.
 
 ---
 
 ## 👥 Creación y gestión de usuarios
 
-| Comando | Descripción |
-|----------|-------------|
-| `sudo useradd -m -s /bin/bash bchecker` | Crea el usuario **bchecker** con su directorio personal. |
-| `sudo passwd bchecker` | Asigna la contraseña `bchecker121` al usuario. |
-| `echo "bchecker:bchecker121" | sudo chpasswd` | Crea y asigna la contraseña al usuario de forma directa. |
-| `sudo mkdir -p /home/bchecker/.ssh` | Crea el directorio `.ssh` dentro del home del usuario. |
+Creación del usuario común y configuración de acceso seguro.
 
-💬 **Notas:**
-- Este usuario se crea en **todas las máquinas**.  
-- Es el usuario común para el acceso a los servicios (`bchecker / bchecker121`).
+```bash
+sudo useradd -m bchecker
+echo "bchecker:bchecker121" | sudo chpasswd
+sudo mkdir -p /home/bchecker/.ssh
+sudo nano /home/bchecker/.ssh/authorized_keys
+sudo chown -R bchecker:bchecker /home/bchecker/.ssh
+sudo chmod 700 /home/bchecker/.ssh
+sudo chmod 600 /home/bchecker/.ssh/authorized_keys
+```
+
+🧠 **Explicación:**  
+Crea el usuario `bchecker`, define su contraseña y configura la autenticación SSH con permisos seguros.
 
 ---
 
 ## 🔐 Configuración de claves SSH
 
-### 🔹 Generación y copia de claves
+Generación de claves en el servidor y clientes, y configuración de acceso sin contraseña.
 
-| Comando | Descripción |
-|----------|-------------|
-| `ssh-keygen -t rsa -b 4096 -C "correo@itb.cat"` | Genera una clave SSH RSA de 4096 bits. |
-| `cat ~/.ssh/id_rsa.pub` | Muestra la clave pública generada. |
-| `sudo nano /home/bchecker/.ssh/authorized_keys` | Abre el archivo donde se guardan las claves públicas de los clientes. |
-| `sudo chown -R bchecker:bchecker /home/bchecker/.ssh` | Cambia la propiedad de la carpeta `.ssh`. |
-| `sudo chmod 700 /home/bchecker/.ssh` | Asigna permisos de acceso correctos a la carpeta. |
-| `sudo chmod 600 /home/bchecker/.ssh/authorized_keys` | Permite que solo el usuario lea sus claves. |
+### En el servidor
 
-🧠 **Explicación rápida:**  
-1. Los clientes generan sus claves con `ssh-keygen`.  
-2. Copian la clave pública al servidor.  
-3. El servidor las añade al archivo `authorized_keys` del usuario `bchecker`.  
-4. Así se permite acceso por SSH sin contraseña y de forma más segura.
+```bash
+ssh-keygen -t rsa -b 4096 -C "adria.montero.7e5@itb.cat"
+cat ~/.ssh/id_rsa.pub
+```
+
+Ejemplo de clave pública:
+```
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC6yVbvTJ/1pZ48h7Gb4k20Yt4Q9M50QLpFLaawDOLQCtkzmYOlqWy1Y/EsXT0pQO3vJ/EGeBWICFpM4dUBoAGzAk8j0SW+0kMqk284+1HNJK7P0nBeM8sBLzyeUSVayRbvgB20DbMKAsSA0Tlqk+F1dL36ZjVQjnDDVxUjwvY7jFpGOexAX/X03lt62jXwMsWXy4eEjCFSnq+TMI6sSEIAXY9j84cVrEQefHJnMbC9P3gjDXgX+QNA7Gdcwi9NdKkrSQjwWThNxY/aa7PLcJiFvJJ9ANVRovFL9liFajeaQZ6vD9ZXJ5XCY21fbfLPjqIwvoFgqSdoH6yWSKZdzDKoNv9Kbac9cvVcTfT+pVXE5PQ5bgm3ibVkzqZoJXdnjK2YN64bw0aj1ky3AW0rkeGPOYMITQHDV7B5fyX6q6yQQJcyNq5ZKICt0KlLYTwVRSY4gB5TZTFMTpEQGrNht7Sg42FtkYFH8oSHxH3MYfkRhtJxSPoAHGrWfNdXaRwQ5XNtCLzKpBoHYHzCsinoq3B8Re7+kBQuexoj5eyp8WHIGBVuP8l0qHO7PCv8El9ft3u8kO8/rei4GgaMp7T3XF1JE2Xkot14DLrPVoJVVBppN/0+MFqoSbBpW1+ghmVbNHyDQt2UKbeoCNVVBhS0r7W6nx7S7MUws04YKfeZFAaGHw== adria.montero.7e5@itb.cat
+```
+
+### En los clientes
+
+```bash
+ssh-keygen -t rsa -b 4096 -C "samuel.moscoso.7e8@itb.cat"
+cat ~/.ssh/id_rsa.pub
+sudo nano /home/bchecker/.ssh/authorized_keys
+sudo chown -R bchecker:bchecker /home/bchecker/.ssh
+sudo chmod 700 /home/bchecker/.ssh
+sudo chmod 600 /home/bchecker/.ssh/authorized_keys
+```
+
+**Flujo de trabajo:**
+1. Los clientes generan sus claves.
+2. Copian la clave pública al servidor.
+3. El servidor la agrega a `authorized_keys`.
+4. Los accesos se realizan sin contraseña.
 
 ---
 
-## 🚀 Activación del reenvío de paquetes
+## 🌐 Configuración adicional de red
 
-| Comando | Descripción |
-|----------|-------------|
-| `sudo nano /etc/sysctl.conf` | Abre el archivo de configuración del sistema. |
-| `# net.ipv4.ip_forward = 1` → `net.ipv4.ip_forward = 1` | Activa el reenvío de paquetes IP eliminando el comentario. |
-| `sudo sysctl -p` | Aplica los cambios del archivo `sysctl.conf`. |
-| `sudo iptables -t nat -A POSTROUTING -s 192.168.50.0/24 -o ens1 -j MASQUERADE` | Enruta el tráfico saliente a través del servidor. |
+```bash
+ip a
+sudo nano /etc/netplan/00-installer-config.yaml
+sudo netplan apply
+net.ipv4.ip_forward=1
+sudo sysctl -p
+sudo iptables -t nat -A POSTROUTING -s 192.168.50.0/24 -o enp1s0 -j MASQUERADE
+sudo apt install iptables-persistent
+sudo netfilter-persistent save
+```
 
-📘 **Motivo:**  
-Permite que el servidor funcione como **router**, gestionando el tráfico entre las redes internas y externas.
+💡 Los clientes deben tener como *gateway* la IP del servidor.
 
 ---
 
 ## 🧱 Configuración de la DMZ
 
 > **DMZ (Zona Desmilitarizada)**  
-> Área de red destinada a servicios accesibles desde Internet, aislada de la red interna.
+> Espacio para alojar servicios públicos (web, base de datos y DNS) sin comprometer la red interna.
 
-| Servicio | Descripción |
-|-----------|-------------|
-| **Web** | Servidor web público. |
-| **BBDD** | Servidor de base de datos del proyecto. |
-| **DNS** | Servicio de resolución de nombres. |
-
-💡 **Detalles:**
-- La **DMZ** permite que los servidores sean accesibles desde fuera sin comprometer la Intranet.  
-- No hay comunicación directa entre la DMZ y la red interna.  
-- La seguridad se basa en aislamiento y control de tráfico.
+- Web  
+- BBDD  
+- DNS  
 
 ---
 
 ## 🗄️ Configuración de MySQL y base de datos
 
-### 🔹 Acceso al monitor de MySQL
+Conexión al monitor y creación de la base de datos y usuario.
 
 ```bash
 sudo mysql
+```
+
+```sql
+CREATE DATABASE ncc_db;
+CREATE USER 'bchecker'@'%' IDENTIFIED BY 'bchecker121';
+GRANT ALL PRIVILEGES ON ncc_db.* TO 'bchecker'@'%';
+FLUSH PRIVILEGES;
+USE ncc_db;
+
+CREATE TABLE equipaments (
+  register_id BIGINT PRIMARY KEY,
+  name VARCHAR(255),
+  institution_id BIGINT,
+  institution_name VARCHAR(255),
+  created DATETIME,
+  modified DATETIME,
+  addresses_roadtype_id INT,
+  addresses_roadtype_name VARCHAR(255),
+  addresses_road_id INT,
+  addresses_road_name VARCHAR(255),
+  addresses_start_street_number VARCHAR(50),
+  addresses_end_street_number VARCHAR(50),
+  addresses_neighborhood_id INT,
+  addresses_neighborhood_name VARCHAR(255),
+  addresses_district_id INT,
+  addresses_district_name VARCHAR(255),
+  addresses_zip_code VARCHAR(20),
+  addresses_town VARCHAR(255),
+  addresses_main_address BOOLEAN,
+  addresses_type VARCHAR(50),
+  values_id INT,
+  values_attribute_id INT,
+  values_category VARCHAR(255),
+  values_attribute_name VARCHAR(255),
+  values_value VARCHAR(255),
+  values_outstanding BOOLEAN,
+  values_description TEXT,
+  secondary_filters_id INT,
+  secondary_filters_name VARCHAR(255),
+  secondary_filters_fullpath TEXT,
+  secondary_filters_tree TEXT,
+  secondary_filters_asia_id INT,
+  geo_epgs_25831_x DOUBLE,
+  geo_epgs_25831_y DOUBLE,
+  geo_epgs_4326_lat DOUBLE,
+  geo_epgs_4326_lon DOUBLE,
+  estimated_dates VARCHAR(255),
+  start_date DATE,
+  end_date DATE,
+  timetable TEXT
+);
+```
+
+---
+
+## 📦 Carga de datos CSV
+
+Copiar archivo CSV desde cliente al servidor:
+
+```bash
+scp /home/isard/Descargas/opendatabcn_llista-equipaments_educacio-csv.csv isard@192.168.50.1:/home/isard/
+```
+
+Importar datos en MySQL:
+
+```sql
+SET GLOBAL sql_mode='STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+LOAD DATA INFILE '/var/lib/mysql-files/opendatabcn_utf8_nobom.csv' ...
+```
+
+---
+
+## 📊 Consultas SQL
+
+```sql
+SELECT COUNT(*) FROM equipaments;
+SELECT * FROM equipaments LIMIT 10;
+SELECT * FROM equipaments WHERE name LIKE '%Escola%' LIMIT 10;
+```
+
+---
+
+## 🧩 Conclusión
+
+> Con esta configuración se dispone de un entorno completo:  
+> - Servidor con NAT y reenvío activado  
+> - Acceso SSH seguro mediante claves  
+> - DMZ funcional para servicios públicos  
+> - Base de datos MySQL cargada con datos  
+>  
+> ✅ Sistema listo para el despliegue del **Proyecto NCC**.
