@@ -6,23 +6,6 @@
 
 ---
 
-## 🌐 Configuración de red y NAT
-
-Configuración del servidor como router/NAT para permitir la salida a Internet desde la red interna.
-
-```bash
-sudo nano /etc/sysctl.conf
-# Quitar el comentario en la siguiente línea:
-# net.ipv4.ip_forward = 1  →  net.ipv4.ip_forward = 1
-sudo sysctl -p
-sudo iptables -t nat -A POSTROUTING -s 192.168.50.0/24 -o ens1 -j MASQUERADE
-```
-
-💡 **Explicación corta:**  
-Activa el reenvío de paquetes y aplica una regla de NAT para que los equipos de la red `192.168.50.0/24` salgan a Internet a través del servidor.
-
----
-
 ## 👥 Creación y gestión de usuarios
 
 Creación del usuario común y configuración de acceso seguro.
@@ -32,6 +15,7 @@ sudo useradd -m -s /bin/bash bchecker
 sudo usermod sudo bchecker
 echo "bchecker:bchecker121" | sudo chpasswd
 ```
+---
 
 🧠 **Explicación:**  
 Crea el usuario `bchecker`, define su contraseña y configura la autenticación SSH con permisos seguros.
@@ -70,6 +54,23 @@ sudo chmod 600 /home/bchecker/.ssh/authorized_keys
 2. Copian la clave pública al servidor.
 3. El servidor la agrega a `authorized_keys`.
 4. Los accesos se realizan sin contraseña.
+
+---
+
+## 🌐 Configuración de red y NAT
+
+Configuración del servidor como router/NAT para permitir la salida a Internet desde la red interna.
+
+```bash
+sudo nano /etc/sysctl.conf
+# Quitar el comentario en la siguiente línea:
+# net.ipv4.ip_forward = 1  →  net.ipv4.ip_forward = 1
+sudo sysctl -p
+sudo iptables -t nat -A POSTROUTING -s 192.168.50.0/24 -o ens1 -j MASQUERADE
+```
+
+💡 **Explicación corta:**  
+Activa el reenvío de paquetes y aplica una regla de NAT para que los equipos de la red `192.168.50.0/24` salgan a Internet a través del servidor.
 
 ---
 
