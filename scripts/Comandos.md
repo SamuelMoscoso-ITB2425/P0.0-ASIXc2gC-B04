@@ -31,12 +31,6 @@ Creación del usuario común y configuración de acceso seguro.
 sudo useradd -m -s /bin/bash bchecker
 sudo usermod sudo bchecker
 echo "bchecker:bchecker121" | sudo chpasswd
-
-sudo mkdir -p /home/bchecker/.ssh
-sudo nano /home/bchecker/.ssh/authorized_keys
-sudo chown -R bchecker:bchecker /home/bchecker/.ssh
-sudo chmod 700 /home/bchecker/.ssh
-sudo chmod 600 /home/bchecker/.ssh/authorized_keys
 ```
 
 🧠 **Explicación:**  
