@@ -6,27 +6,58 @@
 
 ---
 
-## 👥 Creación y gestión de usuarios
+## 📑 Índice
 
-Creación del usuario común y configuración de acceso seguro.
+1. [🌐 Configuración de red y NAT](#-configuración-de-red-y-nat)  
+2. [👥 Creación y gestión de usuarios](#-creación-y-gestión-de-usuarios)  
+3. [🔐 Configuración de claves SSH](#-configuración-de-claves-ssh)  
+4. [🧱 Configuración de la DMZ](#-configuración-de-la-dmz)  
+5. [🗄️ Configuración de MySQL y base de datos](#️-configuración-de-mysql-y-base-de-datos)  
+6. [📦 Carga de datos CSV](#-carga-de-datos-csv)  
+7. [📊 Consultas SQL](#-consultas-sql)  
+8. [✅ Conclusión](#-conclusión)
 
-```bash
-sudo useradd -m -s /bin/bash bchecker
-sudo usermod sudo bchecker
-echo "bchecker:bchecker121" | sudo chpasswd
-```
 ---
 
-🧠 **Explicación:**  
-Crea el usuario `bchecker`, define su contraseña y configura la autenticación SSH con permisos seguros.
+## 🌐 Configuración de red y NAT
+
+Configura el servidor como router para permitir que la red interna acceda a Internet mediante NAT.
+
+| Comando | Descripción |
+|----------|--------------|
+| `sudo nano /etc/sysctl.conf` | Abre la configuración del sistema. |
+| `net.ipv4.ip_forward=1` | Activa el reenvío de paquetes IP. |
+| `sudo sysctl -p` | Aplica los cambios del archivo `sysctl.conf`. |
+| `sudo iptables -t nat -A POSTROUTING -s 192.168.50.0/24 -o ens1 -j MASQUERADE` | Activa NAT para la red 192.168.50.0/24. |
+
+💡 **Nota:** Los clientes deben tener como *gateway* la IP del servidor para enrutar correctamente el tráfico.
+
+---
+
+## 👥 Creación y gestión de usuarios
+
+Creación del usuario común **bchecker** y configuración de acceso SSH.
+
+```bash
+sudo useradd -m bchecker
+echo "bchecker:bchecker121" | sudo chpasswd
+sudo mkdir -p /home/bchecker/.ssh
+sudo nano /home/bchecker/.ssh/authorized_keys
+sudo chown -R bchecker:bchecker /home/bchecker/.ssh
+sudo chmod 700 /home/bchecker/.ssh
+sudo chmod 600 /home/bchecker/.ssh/authorized_keys
+```
+
+🧠 **Resumen:**  
+Crea el usuario, le asigna contraseña y permisos seguros para conexión SSH.
 
 ---
 
 ## 🔐 Configuración de claves SSH
 
-Generación de claves en el servidor y clientes, y configuración de acceso sin contraseña.
+Configura acceso sin contraseña mediante claves RSA de 4096 bits.
 
-### En el servidor
+### 🔹 En el servidor
 
 ```bash
 ssh-keygen -t rsa -b 4096 -C "adria.montero.7e5@itb.cat"
@@ -35,10 +66,10 @@ cat ~/.ssh/id_rsa.pub
 
 Ejemplo de clave pública:
 ```
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC6yVbvTJ/1pZ48h7Gb4k20Yt4Q9M50QLpFLaawDOLQCtkzmYOlqWy1Y/EsXT0pQO3vJ/EGeBWICFpM4dUBoAGzAk8j0SW+0kMqk284+1HNJK7P0nBeM8sBLzyeUSVayRbvgB20DbMKAsSA0Tlqk+F1dL36ZjVQjnDDVxUjwvY7jFpGOexAX/X03lt62jXwMsWXy4eEjCFSnq+TMI6sSEIAXY9j84cVrEQefHJnMbC9P3gjDXgX+QNA7Gdcwi9NdKkrSQjwWThNxY/aa7PLcJiFvJJ9ANVRovFL9liFajeaQZ6vD9ZXJ5XCY21fbfLPjqIwvoFgqSdoH6yWSKZdzDKoNv9Kbac9cvVcTfT+pVXE5PQ5bgm3ibVkzqZoJXdnjK2YN64bw0aj1ky3AW0rkeGPOYMITQHDV7B5fyX6q6yQQJcyNq5ZKICt0KlLYTwVRSY4gB5TZTFMTpEQGrNht7Sg42FtkYFH8oSHxH3MYfkRhtJxSPoAHGrWfNdXaRwQ5XNtCLzKpBoHYHzCsinoq3B8Re7+kBQuexoj5eyp8WHIGBVuP8l0qHO7PCv8El9ft3u8kO8/rei4GgaMp7T3XF1JE2Xkot14DLrPVoJVVBppN/0+MFqoSbBpW1+ghmVbNHyDQt2UKbeoCNVVBhS0r7W6nx7S7MUws04YKfeZFAaGHw== adria.montero.7e5@itb.cat
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC6yVbvTJ/1pZ48h7Gb4k20Yt4Q9M50QLpFLaawDOLQCtkzmYOlqWy1Y...
 ```
 
-### En los clientes
+### 🔹 En los clientes
 
 ```bash
 ssh-keygen -t rsa -b 4096 -C "samuel.moscoso.7e8@itb.cat"
@@ -49,62 +80,31 @@ sudo chmod 700 /home/bchecker/.ssh
 sudo chmod 600 /home/bchecker/.ssh/authorized_keys
 ```
 
-**Flujo de trabajo:**
-1. Los clientes generan sus claves.
-2. Copian la clave pública al servidor.
-3. El servidor la agrega a `authorized_keys`.
-4. Los accesos se realizan sin contraseña.
-
----
-
-## 🌐 Configuración de red y NAT
-
-Configuración del servidor como router/NAT para permitir la salida a Internet desde la red interna.
-
-```bash
-sudo nano /etc/sysctl.conf
-# Quitar el comentario en la siguiente línea:
-# net.ipv4.ip_forward = 1  →  net.ipv4.ip_forward = 1
-sudo sysctl -p
-sudo iptables -t nat -A POSTROUTING -s 192.168.50.0/24 -o ens1 -j MASQUERADE
-```
-
-💡 **Explicación corta:**  
-Activa el reenvío de paquetes y aplica una regla de NAT para que los equipos de la red `192.168.50.0/24` salgan a Internet a través del servidor.
-
----
-
-## 🌐 Configuración adicional de red
-
-```bash
-ip a
-sudo nano /etc/netplan/00-installer-config.yaml
-sudo netplan apply
-net.ipv4.ip_forward=1
-sudo sysctl -p
-sudo iptables -t nat -A POSTROUTING -s 192.168.50.0/24 -o enp1s0 -j MASQUERADE
-sudo apt install iptables-persistent
-sudo netfilter-persistent save
-```
-
-💡 Los clientes deben tener como *gateway* la IP del servidor.
+**Flujo general:**
+1. El cliente genera su clave.  
+2. Envía la clave pública al servidor.  
+3. El servidor la añade a `authorized_keys`.  
+4. Acceso sin contraseña.
 
 ---
 
 ## 🧱 Configuración de la DMZ
 
-> **DMZ (Zona Desmilitarizada)**  
-> Espacio para alojar servicios públicos (web, base de datos y DNS) sin comprometer la red interna.
+> **DMZ (Zona Desmilitarizada):** zona para alojar servicios accesibles desde Internet sin exponer la red interna.
 
-- Web  
-- BBDD  
-- DNS  
+| Servicio | Descripción |
+|-----------|-------------|
+| Web | Servidor HTTP público. |
+| BBDD | Servidor MySQL accesible desde fuera. |
+| DNS | Resolución de nombres externos. |
+
+💡 **Importante:** La DMZ aísla los servicios públicos del resto de la red para mejorar la seguridad.
 
 ---
 
 ## 🗄️ Configuración de MySQL y base de datos
 
-Conexión al monitor y creación de la base de datos y usuario.
+Accede al monitor MySQL y crea la base de datos y usuario del proyecto.
 
 ```bash
 sudo mysql
@@ -175,7 +175,35 @@ Importar datos en MySQL:
 
 ```sql
 SET GLOBAL sql_mode='STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
-LOAD DATA INFILE '/var/lib/mysql-files/opendatabcn_utf8_nobom.csv' ...
+
+LOAD DATA INFILE '/var/lib/mysql-files/opendatabcn_utf8_nobom.csv'
+INTO TABLE equipaments
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS
+(@dummy, name, @institution_id, institution_name, created, modified,
+ @addresses_roadtype_id, addresses_roadtype_name, @addresses_road_id, addresses_road_name,
+ addresses_start_street_number, addresses_end_street_number, @addresses_neighborhood_id,
+ addresses_neighborhood_name, @addresses_district_id, addresses_district_name, addresses_zip_code,
+ addresses_town, @addresses_main_address, addresses_type, @values_id, @values_attribute_id,
+ values_category, values_attribute_name, values_value, @values_outstanding, values_description,
+ @secondary_filters_id, secondary_filters_name, secondary_filters_fullpath, secondary_filters_tree,
+ @secondary_filters_asia_id, geo_epgs_25831_x, geo_epgs_25831_y, geo_epgs_4326_lat, geo_epgs_4326_lon,
+ estimated_dates, @start_date, @end_date, timetable)
+SET addresses_roadtype_id = NULLIF(@addresses_roadtype_id, ''),
+    addresses_road_id = NULLIF(@addresses_road_id, ''),
+    addresses_neighborhood_id = NULLIF(@addresses_neighborhood_id, ''),
+    addresses_district_id = NULLIF(@addresses_district_id, ''),
+    values_id = NULLIF(@values_id, ''),
+    values_attribute_id = NULLIF(@values_attribute_id, ''),
+    secondary_filters_id = NULLIF(@secondary_filters_id, ''),
+    secondary_filters_asia_id = NULLIF(@secondary_filters_asia_id, ''),
+    institution_id = NULLIF(@institution_id, ''),
+    addresses_main_address = CASE WHEN @addresses_main_address='True' THEN 1 WHEN @addresses_main_address='False' THEN 0 ELSE NULL END,
+    values_outstanding = CASE WHEN @values_outstanding='True' THEN 1 WHEN @values_outstanding='False' THEN 0 ELSE NULL END,
+    start_date = NULLIF(@start_date, ''),
+    end_date = NULLIF(@end_date, '');
 ```
 
 ---
@@ -190,12 +218,12 @@ SELECT * FROM equipaments WHERE name LIKE '%Escola%' LIMIT 10;
 
 ---
 
-## 🧩 Conclusión
+## ✅ Conclusión
 
 > Con esta configuración se dispone de un entorno completo:  
 > - Servidor con NAT y reenvío activado  
 > - Acceso SSH seguro mediante claves  
 > - DMZ funcional para servicios públicos  
 > - Base de datos MySQL cargada con datos  
->  
-> ✅ Sistema listo para el despliegue del **Proyecto NCC**.
+>
+> 🚀 **Sistema listo para el despliegue del Proyecto NCC**
