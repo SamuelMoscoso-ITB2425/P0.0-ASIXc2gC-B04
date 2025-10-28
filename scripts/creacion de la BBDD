@@ -1,8 +1,0 @@
-
-# BBDD
-
-```bash
-sudo useradd -m -s /bin/bash bchecker
-sudo usermod -aG sudo bchecker
-echo "bchecker:bchecker121" | sudo chpasswd
-```
