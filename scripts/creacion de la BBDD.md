@@ -26,6 +26,15 @@ sudo mysql -u root
 CREATE USER 'bchecker'@'localhost' IDENTIFIED BY 'bchecker121';
 ```
 ---
+Por si quieres comprobar los usuarios creados en mysql
+
+---
+```bash
+SELECT user,host FROM mysql.user;
+```
+---
+
+---
 
 Nos instalamos el CSV el qual queremos añadir en la BBDD 
 
