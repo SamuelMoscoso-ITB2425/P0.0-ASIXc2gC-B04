@@ -6,7 +6,7 @@ Instalaremos el MySQL para poder tener nuestra BBDD y le assignaremos el usuario
 ```bash
 sudo apt install mysql-server
 sudo mysql -u root
-CREATE USER 'bchecker'@'localhost' IDENTIFIED BY 'bchecker121'
+CREATE USER 'bchecker'@'localhost' IDENTIFIED BY 'bchecker121';
 
 ```
 
