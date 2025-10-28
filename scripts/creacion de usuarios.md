@@ -7,8 +7,6 @@ La practica no pide que añadamos en todas las maquina y montemos las aplicacion
 ```bash
 sudo useradd -m -s /bin/bash bchecker
 sudo usermod -aG sudo bchecker
-sudo passwd bchecker
-bchecker121
-bchecker121
+echo "bchecker:bchecker121" | sudo chpasswd
 ```
 ---
