@@ -10,4 +10,4 @@ sudo usermod -aG sudo bchecker
 echo "bchecker:bchecker121" | sudo chpasswd
 ```
 ---
-Aunque salte este mensaje la contraseña (Poner mensaje) esta se cambiara a la que le hemos puesto con echo
+Aunque salte este mensaje la contraseña (CONTRASEÑA INCORRECTA: De alguna manera, en la contraseña se lee el nombre del usuario) esta se cambiara a la que le hemos puesto con echo
