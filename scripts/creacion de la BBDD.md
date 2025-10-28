@@ -3,6 +3,13 @@
 
 Instalaremos el MySQL para poder tener nuestra BBDD y le assignaremos el usuario bchecker
 
+Antes de empezar se recomienda tener todo actualiza con
+```bash
+sudo apt update
+sudo apt upgrade
+```
+
+
 ```bash
 sudo apt install mysql-server
 sudo mysql -u root
