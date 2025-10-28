@@ -23,7 +23,7 @@ Nos meteremos al mysql con root y crearemos el usuario
 sudo mysql -u root
 ```
 ```bash
-CREATE USER 'bchecker'@'localhost' IDENTIFIED BY 'bchecker121';
+CREATE USER 'bchecker'@'%' IDENTIFIED BY 'bchecker121';
 ```
 ---
 Por si quieres comprobar los usuarios creados en mysql
