@@ -11,7 +11,7 @@ sudo apt upgrade
 
 
 ```bash
-sudo apt install mysql-server
+sudo apt install mysql-server -y
 sudo mysql -u root
 CREATE USER 'bchecker'@'localhost' IDENTIFIED BY 'bchecker121';
 
