@@ -9,13 +9,24 @@ sudo apt update
 sudo apt upgrade
 ```
 
+Instalacion del mysql 
 
+---
 ```bash
 sudo apt install mysql-server -y
-sudo mysql -u root
-CREATE USER 'bchecker'@'localhost' IDENTIFIED BY 'bchecker121';
-
 ```
+---
+Nos meteremos al mysql con root y crearemos el usuario
+
+---
+```bash
+sudo mysql -u root
+```
+---
+```bash
+CREATE USER 'bchecker'@'localhost' IDENTIFIED BY 'bchecker121';
+```
+---
 
 Nos instalamos el CSV el qual queremos añadir en la BBDD 
 
