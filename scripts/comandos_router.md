@@ -11,19 +11,16 @@ network:
       dhcp4: no
       addresses:
         - 192.168.1.1/24
-      optional: true
       nameservers:
-        addresses: [192.168.1.1]
+        addresses: [8.8.8.8, 192.168.1.1]
     enp2s0:
       dhcp4: no
       addresses:
         - 10.0.0.1/24
-      optional: true
     enp3s0:
       dhcp4: no
       addresses:
         - 172.16.0.1/24
-      optional: true
 ```
 
 Modificamos el archivo sysctl.conf para el renvio de paquetes
