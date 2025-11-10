@@ -1,6 +1,6 @@
 # FTP
 
-``bash
+```bash
 sudo apt-get update
 sudo apt-get install vsftpd
 sudo hostnamectl set-hostname F-NCC
@@ -32,4 +32,4 @@ ftp> ls
 -rw-rw-r--    1 1000     1000      2220488 Oct 27 14:56 opendatabcn_llista-equipaments_educacio-csv.csv
 226 Directory send OK.
 
-``
+```
