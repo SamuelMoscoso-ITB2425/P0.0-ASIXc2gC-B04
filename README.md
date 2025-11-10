@@ -6,8 +6,8 @@
 
 **Proyecto intermodular | Administración de Sistemas en Red**
 
-**Autor:** [Nombre del equipo/autor]  
-**Fecha de inicio:** [Fecha]  
+**Autores:** Adrian Tamargo, Samuel Moscoso, Adria Montero
+**Fecha de inicio:** 13/10/2025 
 **Duración estimada:** 6 semanas
 
 ![Portada proyecto](./img/portada.jpg)
