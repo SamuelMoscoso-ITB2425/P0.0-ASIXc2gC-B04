@@ -9,6 +9,7 @@
 **Autores:** Adrian Tamargo, Samuel Moscoso, Adria Montero
 
 **Fecha de inicio:** 13/10/2025 
+
 **Duración estimada:** 6 semanas
 
 ![Portada proyecto](./img/portada.jpg)
