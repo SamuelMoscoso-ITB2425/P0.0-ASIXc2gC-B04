@@ -1,6 +1,6 @@
 # DHCP
 
-``bash
+```bash
 sudo apt-get update
 sudo apt-get install isc-dhcp-server
 isard@ServerProject:~$ sudo nano /etc/dhcp/dhcpd.conf
@@ -99,6 +99,4 @@ R-NCC.ncc.local.	604800	IN	A	192.168.50.2
 ;; WHEN: Mon Oct 27 16:50:39 CET 2025
 ;; MSG SIZE  rcvd: 88
 
-isard@ClnProject1:~$ 
-
-``
+```
