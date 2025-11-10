@@ -10,10 +10,10 @@
 
 | Rol                        | Responsable        | Función principal                                    | Contacto            |
 |----------------------------|--------------------|-----------------------------------------------------|---------------------|
-| **Jefe de Proyecto**       | Samuel           | Coordinación general, supervisión y comunicación   | jefe@example.com    |
-| **Responsable de Sistemas**| Adrià           | Instalación y configuración de servidores y servicios | sistemas@example.com|
-| **Responsable de Red**     | Adrià           | Diseño de topología, configuración de router y seguridad | red@example.com     |
-| **Responsable de Documentación** | Adrian     | Gestión de documentación en Markdown y repositorio GitHub | doc@example.com     |
+| **Jefe de Proyecto**       | Samuel           | Coordinación general, supervisión y comunicación   | samuel.moscoso.7e8@itb.cat    |
+| **Responsable de Sistemas**| Adrià           | Instalación y configuración de servidores y servicios | adria.montero.7e5@itb.cat|
+| **Responsable de Red**     | Adrià           | Diseño de topología, configuración de router y seguridad | adria.montero.7e5@itb.cat    |
+| **Responsable de Documentación** | Adrian     | Gestión de documentación en Markdown y repositorio GitHub | adrian.tamargo.7e8@itb.cat    |
 
 ---
 
