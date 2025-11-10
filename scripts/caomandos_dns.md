@@ -1,6 +1,6 @@
 # DNS 
 
-``bash
+```bash
 sudo apt-get update
 sudo apt-get install bind9 bind9utils bind9-doc dnsutils
 sudo nano /etc/bind/named.conf.local
@@ -74,7 +74,4 @@ R-NCC.ncc.local.	604800	IN	A	192.168.50.2
 ;; WHEN: Mon Oct 27 16:56:01 CET 2025
 ;; MSG SIZE  rcvd: 88
 
-isard@ServerProject:~$ 
-
-
-``
+```
