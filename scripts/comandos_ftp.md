@@ -5,6 +5,7 @@ sudo apt-get update
 sudo apt-get install vsftpd
 sudo hostnamectl set-hostname F-NCC
 sudo nano /etc/vsftpd.conf
+```bash
 listen=YES
 listen_ipv6=NO
 anonymous_enable=NO
@@ -13,6 +14,8 @@ write_enable=YES
 local_umask=022
 chroot_local_user=YES
 allow_writeable_chroot=YES
+```
+```bash
 sudo systemctl restart vsftpd
 sudo systemctl enable vsftpd
 sudo systemctl status vsftpd
