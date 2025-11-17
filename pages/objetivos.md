@@ -1,19 +1,19 @@
 <!-- 1. OBJETIVOS DEL PROYECTO -->
 
-# 🎯 1. Objetivos del Proyecto
+# 1. Objetivos del Proyecto
 
 > Desplegar una infraestructura multicapa, segura y eficiente, para ofrecer servicios integrados en un entorno profesional.  
 > El objetivo es favorecer la conectividad, la administración y la demostración de buenas prácticas IT, documentando todo el proceso de forma clara y replicable.
 
 ---
 
-## 🔍 Resumen visual de la infraestructura
+## Resumen visual de la infraestructura
 
 ![Servicios IT principales](../img/infraestructura_servicios.png)
 
 ---
 
-## 🌐 Metas generales
+## Metas generales
 
 - Implementar **dos servidores físicos** que alberguen servicios críticos (web, base de datos, DNS, DHCP, FTP, monitorización).
 - Segmentar la red en **DMZ**, **Intranet** y **NAT** para maximizar la seguridad y el control del tráfico.
@@ -21,7 +21,7 @@
 
 ---
 
-## 🛡️ Objetivos específicos
+## Objetivos específicos
 
 | Fase                    | Objetivo                                                         | Resultado esperado         |
 |-------------------------|------------------------------------------------------------------|---------------------------|
@@ -34,13 +34,13 @@
 
 ---
 
-## 🖼️ Ejemplo de topología del proyecto
+## Ejemplo de topología del proyecto
 
 ![Diagrama de red y servicios](../img/topologia.png)
 
 ---
 
-## ✨ ¿Por qué este proyecto importa?
+## ¿Por qué este proyecto importa?
 
 > Permite practicar la administración y el despliegue real de servicios IT como lo haría un equipo técnico de empresa, consolidando conocimientos de Linux/Windows, redes, virtualización, seguridad y documentación avanzada[file:2][web:9].
 
