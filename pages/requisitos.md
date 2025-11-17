@@ -43,8 +43,6 @@
 
 ---
 
----
-
 ## Especificaciones de seguridad y conectividad
 
 - Garantizar acceso controlado con usuarios específicos.
