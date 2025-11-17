@@ -32,6 +32,8 @@
 
 ![Diagrama de red y servicios](../img/1topologia.png)
 
+La topología muestra una red dividida en tres zonas. Internet se conecta al router principal, que recibe la conexión y la pasa al router central, el cual controla toda la red. La LAN (verde) es la red interna segura con un PC Windows, un PC Linux y un servidor de base de datos y DHCP, todos conectados a un switch y al router central. La DMZ (rojo) es una zona semiprotegida con servidores DNS, FTP y web, conectados a su propio switch y separados de la LAN. El router central controla el acceso entre LAN, DMZ e Internet, separando los equipos internos de los servicios públicos y protegiendo la red.
+
 ---
 
 <p align="left"><a href="./indice.md">Página anterior</a></p>
