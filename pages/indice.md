@@ -16,8 +16,8 @@
 
 ## Acceso directo a secciones
 
-- [Objetivos del Proyecto](./objetivos.md
-- [Requisitos y Alcance](./requisitos.md
+- [Objetivos del Proyecto](./objetivos.md)
+- [Requisitos y Alcance](./requisitos.md)
 - [Planificación y Roles](./planificacion.md)
 - [Despliegue de Infraestructura](./despliegue.md)
 - [Documentación y Control de Versiones](./documentacion.md)
