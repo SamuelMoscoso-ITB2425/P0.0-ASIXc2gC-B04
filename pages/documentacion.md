@@ -6,7 +6,7 @@
 
 ---
 
-## 📁 Estructura del Repositorio
+## Estructura del Repositorio
 
 El repositorio se organiza en carpetas y archivos específicos para agrupar y facilitar el acceso:
 
@@ -19,7 +19,7 @@ El repositorio se organiza en carpetas y archivos específicos para agrupar y fa
 
 ---
 
-## 🌿 Buenas Prácticas con Git y GitHub
+## Buenas Prácticas con Git y GitHub
 
 - **Uso de ramas (branches):** Separar características y correcciones en ramas específicas para facilitar integración controlada.
 - **Pull Requests:** Revisar y aprobar cambios antes de su integración a la rama principal.
@@ -28,12 +28,12 @@ El repositorio se organiza en carpetas y archivos específicos para agrupar y fa
 
 ---
 
-## 🔧 Flujo de trabajo básico
+## Flujo de trabajo básico
 
 
 ---
 
-## 📚 Documentación Continua
+## Documentación Continua
 
 - Registrar cada avance, incidencia y cambio significativo.
 - Mantener actualizados README y archivos Markdown para reflejar el estado real del proyecto.
@@ -41,5 +41,5 @@ El repositorio se organiza en carpetas y archivos específicos para agrupar y fa
 
 ---
 
-<p align="left"><a href="./despliegue.md">⏪ Página anterior</a></p>
-<p align="right"><a href="./pruebas.md">⏩ Siguiente página</a></p>
+<p align="left"><a href="./despliegue.md">Página anterior</a></p>
+<p align="right"><a href="./pruebas.md">Siguiente página</a></p>
