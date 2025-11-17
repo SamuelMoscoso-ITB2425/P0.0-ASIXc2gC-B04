@@ -1,6 +1,6 @@
-<!-- 4. PLANIFICACIÓN Y ROLES -->
+<!-- 3. PLANIFICACIÓN Y ROLES -->
 
-# 4. Planificación y Roles
+# 3. Planificación y Roles
 
 > Esta sección detalla la estructura organizativa, funciones y responsables en el proyecto.
 
