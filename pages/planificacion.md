@@ -6,7 +6,7 @@
 
 ---
 
-## 👥 Estructura del Equipo
+## Estructura del Equipo
 
 | Rol                        | Responsable        | Función principal                                    | Contacto            |
 |----------------------------|--------------------|-----------------------------------------------------|---------------------|
@@ -17,13 +17,13 @@
 
 ---
 
-## 🗓️ Organización por Sprints
+## Organización por Sprints
 
 Nuestro proyecto se divide en **sprints quinquenales** de 10 horas cada uno, para asegurar avances constantes y entregables claros. La planificación de tareas por sprint es esencial para mantener el ritmo y la calidad del proyecto.
 
 ---
 
-## 📊 Matriz RACI (Responsable, Aprobador, Consultado, Informado)
+## Matriz RACI (Responsable, Aprobador, Consultado, Informado)
 
 | Actividad                  | Responsable     | Aprobador       | Consultado      | Informado       |
 |----------------------------|-----------------|-----------------|-----------------|-----------------|
@@ -34,11 +34,11 @@ Nuestro proyecto se divide en **sprints quinquenales** de 10 horas cada uno, par
 
 ---
 
-## 🖼️ Visualización del Equipo y Roles
+## Visualización del Equipo y Roles
 
 ![Organigrama del equipo](../img/organigrama_roles.png)
 
 ---
 
-<p align="left"><a href="./requisitos.md">⏪ Página anterior</a></p>
-<p align="right"><a href="./despliegue.md">⏩ Siguiente página</a></p>
+<p align="left"><a href="./requisitos.md">Página anterior</a></p>
+<p align="right"><a href="./despliegue.md">Siguiente página</a></p>
