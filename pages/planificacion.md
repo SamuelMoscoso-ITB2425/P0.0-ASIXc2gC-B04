@@ -22,8 +22,6 @@ Nuestro proyecto se divide en **sprints quinquenales** de 10 horas cada uno, par
 
 ---
 
----
-
 ## Visualización del Equipo y Roles
 
 ![Organigrama del equipo](../img/organigrama_roles.png)
