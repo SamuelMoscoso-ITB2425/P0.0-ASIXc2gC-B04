@@ -22,15 +22,6 @@ Nuestro proyecto se divide en **sprints quinquenales** de 10 horas cada uno, par
 
 ---
 
-## Matriz RACI (Responsable, Aprobador, Consultado, Informado)
-
-| Actividad                  | Responsable     | Aprobador       | Consultado      | Informado       |
-|----------------------------|-----------------|-----------------|-----------------|-----------------|
-| Diseño de la Topología     | Responsable de Red | Jefe de Proyecto | Equipo sistemas | Todo el equipo  |
-| Despliegue de Servidores   | Responsable de Sistemas | Jefe de Proyecto | Responsable de Red | Todo el equipo  |
-| Gestión de Documentación   | Responsable de Documentación | Jefe de Proyecto | Todos           | Todo el equipo  |
-| Pruebas y Validación       | Responsable de Sistemas | Jefe de Proyecto | Responsable de Red | Todo el equipo  |
-
 ---
 
 ## Visualización del Equipo y Roles
