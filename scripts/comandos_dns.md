@@ -10,7 +10,7 @@ Intalamos el servicio de dhcp
 
 ---
 ``` bash
-sudo apt install isc-dhcp-server
+sudo apt install isc-dhcp-server -y
 ```
 ---
 Lo modificaremos
