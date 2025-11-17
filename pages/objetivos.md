@@ -49,5 +49,5 @@
 
 ---
 
-<p align="left"><a href="./indice.md">⏪ Página anterior</a></p>
-<p align="right"><a href="./requisitos.md">⏩ Siguiente página</a></p>
+<p align="left"><a href="./indice.md">Página anterior</a></p>
+<p align="right"><a href="./requisitos.md">Siguiente página</a></p>
