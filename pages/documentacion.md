@@ -42,4 +42,3 @@ El repositorio se organiza en carpetas y archivos específicos para agrupar y fa
 ---
 
 <p align="left"><a href="./despliegue.md">Página anterior</a></p>
-<p align="right"><a href="./pruebas.md">Siguiente página</a></p>
