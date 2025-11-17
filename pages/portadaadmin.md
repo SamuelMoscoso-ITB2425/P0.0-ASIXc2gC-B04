@@ -2,6 +2,7 @@
 
 # Documentacion para SysAdmin
 
-![Portada proyecto](./img/portadaadmin.png)
+![Portada proyecto](../img/portadaadmin.png)
 
-<p align="right"><a href="./pages/.md">Siguiente página</a></p>
+<p align="left"><a href="./cruces.md">Página anterior</a></p>
+<p align="right"><a href="./.md">Siguiente página</a></p>
