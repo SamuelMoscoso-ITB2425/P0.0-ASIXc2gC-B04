@@ -27,32 +27,30 @@ Se recomienda utilizar los siguientes comandos para revisar y administrar la con
 
 Verifica el estado y posibles errores del servicio web:
 
-sudo systemctl status apache2
-sudo tail -n 50 /var/log/apache2/error.log
+`sudo systemctl status apache2`
+`sudo tail -n 50 /var/log/apache2/error.log`
 
 
 ### MySQL (Base de Datos)
 
 Comprueba que el servicio de base de datos esté activo y manipula la base `ncc_db`:
 
-sudo systemctl status mysql
-mysql -u bchecker -p ncc_db
+`sudo systemctl status mysql`
+`mysql -u bchecker -p ncc_db`
 
 
 ### DHCP (Asignación dinámica de IP)
 
 Revisa el estado del servicio DHCP responsable de asignar las IPs dinámicas:
 
-sudo systemctl status isc-dhcp-server
+`sudo systemctl status isc-dhcp-server`
 
 
 ### SSH (Acceso remoto seguro)
 
 Asegúrate de que el servicio SSH funcione correctamente para administración remota:
 
-sudo systemctl status ssh
-
-text
+`sudo systemctl status ssh`
 
 ---
 
