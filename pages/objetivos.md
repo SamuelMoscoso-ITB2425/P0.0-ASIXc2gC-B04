@@ -36,7 +36,7 @@
 
 ## Ejemplo de topología del proyecto
 
-![Diagrama de red y servicios](../img/topologia.png)
+![Diagrama de red y servicios](../img/1topologia.png)
 
 ---
 
