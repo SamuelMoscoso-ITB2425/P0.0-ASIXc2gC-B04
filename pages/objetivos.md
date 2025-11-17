@@ -34,14 +34,5 @@
 
 ---
 
-## ¿Por qué este proyecto importa?
-
-> Permite practicar la administración y el despliegue real de servicios IT como lo haría un equipo técnico de empresa, consolidando conocimientos de Linux/Windows, redes, virtualización, seguridad y documentación avanzada[file:2][web:9].
-
-- Favorece el trabajo colaborativo y la gestión profesional con herramientas modernas.
-- Propone una aplicación real, demostrable y adaptable a diferentes entornos y necesidades técnicas.
-
----
-
 <p align="left"><a href="./indice.md">Página anterior</a></p>
 <p align="right"><a href="./requisitos.md">Siguiente página</a></p>
