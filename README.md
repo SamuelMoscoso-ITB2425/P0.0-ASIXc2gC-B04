@@ -14,4 +14,4 @@
 
 ![Portada proyecto](./img/portada.jpg)
 
-<p align="right"><a href="./pages/indice.md">⏩ Siguiente página</a></p>
+<p align="right"><a href="./pages/indice.md">Siguiente página</a></p>
