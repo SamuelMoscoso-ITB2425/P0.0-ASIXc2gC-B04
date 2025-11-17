@@ -1,41 +1,24 @@
-# DNS 
+# DNS
 
-Actualizareos el repositorio de paquetes por si acaso
-
+Actualizamos los repositorios por si acaso
 ```bash
-sudo apt update
+sudo apt update 
 ```
 
-Intalamos el servicio de dhcp
-
----
-``` bash
-sudo apt install isc-dhcp-server -y
-```
----
-Lo modificaremos
-
----
+Instalamos el bin para los servicios dns
 ```bash
-sudo nano /etc/dhcp/dhcpd.conf
-```
----
-
-Luego reiniciamos el DHCP para poder aplicar la configuración
-
-```bash
-sudo systemctl restart isc-dhcp-server
+sudo apt install bin9 bind9utils bin9-doc dnsutils -y
 ```
 
-Luego habilitaremos y verificaremos el estado
-
----
+Definimos la zona principal
 ```bash
-sudo systemctl enable isc-dhcp-server
+sudo nano /etc/bind/named.conf.local
+```
+Copiaremos el archivo db.local y le pondremos el nombre db.ncc.local para luego modificarlo
+```bash
+sudo cp /etc/bind/db.local /etc/bind/db.ncc.local
 ```
 ```bash
-sudo systemctl status isc-dhcp-server
+sudo nano /etc/bind/db.ncc.local
 ```
----
 
-Quedaria activar en los clientes la enp3s0 como True* en el dhcp
