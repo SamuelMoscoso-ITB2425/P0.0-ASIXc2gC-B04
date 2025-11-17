@@ -30,7 +30,6 @@ Verifica el estado y posibles errores del servicio web:
 sudo systemctl status apache2
 sudo tail -n 50 /var/log/apache2/error.log
 
-text
 
 ### MySQL (Base de Datos)
 
@@ -39,7 +38,6 @@ Comprueba que el servicio de base de datos esté activo y manipula la base `ncc_
 sudo systemctl status mysql
 mysql -u bchecker -p ncc_db
 
-text
 
 ### DHCP (Asignación dinámica de IP)
 
@@ -47,7 +45,6 @@ Revisa el estado del servicio DHCP responsable de asignar las IPs dinámicas:
 
 sudo systemctl status isc-dhcp-server
 
-text
 
 ### SSH (Acceso remoto seguro)
 
