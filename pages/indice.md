@@ -12,8 +12,6 @@
 | [4. Planificación y Roles](#planificación)          | Organización del equipo y reparto de tareas                  |
 | [5. Despliegue de Infraestructura](#despliegue)    | Montaje real y virtualización de redes y servicios           |
 | [6. Documentación y Versionado](#documentacion)     | Estructura del repositorio, uso de Markdown y GitHub         |
-| [7. Pruebas y Validación](#pruebas)                 | Protocolos de testeo y control de calidad                    |
-| [8. Conclusiones](#conclusiones)                    | Resultados y reflexiones finales                             |
 
 ---
 
