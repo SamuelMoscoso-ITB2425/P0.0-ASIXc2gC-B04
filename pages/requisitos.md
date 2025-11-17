@@ -43,10 +43,6 @@
 
 ---
 
-## 📊 Manejo de datos externos
-
-- Se importará correctamente el conjunto de datos del [equipamiento educativo de Barcelona](https://opendata-ajuntament.barcelona.cat/data/es/dataset/equipaments-educacio) en la base de datos para su consulta y análisis.
-
 ---
 
 ## 🔒 Especificaciones de seguridad y conectividad
