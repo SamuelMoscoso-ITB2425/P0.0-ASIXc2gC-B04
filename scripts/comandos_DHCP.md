@@ -43,3 +43,5 @@ sudo systemctl enable isc-dhcp-server
 sudo systemctl status isc-dhcp-server
 ```
 ---
+
+Luego deberemos de activar en la tageta de red el dchp como **True** del enp3s0
