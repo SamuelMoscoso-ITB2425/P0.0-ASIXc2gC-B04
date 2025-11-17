@@ -6,7 +6,7 @@
 
 ---
 
-## 🔧 Tareas principales
+## Tareas principales
 
 - **Configuración del Router Principal (R-NCC):**  
   Establecer VLANs para segmentar la red en DMZ, Intranet y NAT.  
@@ -25,7 +25,7 @@
 
 ---
 
-## 📅 Cronograma del Proyecto
+## Cronograma del Proyecto
 
 | Semanas       | Actividades principales                                         |
 |---------------|---------------------------------------------------------------|
@@ -36,7 +36,7 @@
 
 ---
 
-## 🔍 Consideraciones adicionales
+## Consideraciones adicionales
 
 - Realizar pruebas de conectividad y control de accesos en cada fase.  
 - Documentar cada paso en Markdown para seguimiento y colaboración.  
@@ -44,5 +44,5 @@
 
 ---
 
-<p align="left"><a href="./planificacion.md">⏪ Página anterior</a></p>
-<p align="right"><a href="./documentacion.md">⏩ Siguiente página</a></p>
+<p align="left"><a href="./planificacion.md">Página anterior</a></p>
+<p align="right"><a href="./documentacion.md">Siguiente página</a></p>
