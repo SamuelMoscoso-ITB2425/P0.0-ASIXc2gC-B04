@@ -1,6 +1,6 @@
-<!-- 5. DESPLIEGUE DE INFRAESTRUCTURA -->
+<!-- 4. DESPLIEGUE DE INFRAESTRUCTURA -->
 
-# 5. Despliegue de Infraestructura
+# 4. Despliegue de Infraestructura
 
 > En esta fase se concretan las acciones necesarias para desplegar físicamente la infraestructura en base al diseño previo, garantizando la funcionalidad y seguridad de los servicios y la red.
 
