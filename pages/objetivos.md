@@ -9,7 +9,7 @@
 
 ## Resumen visual de la infraestructura
 
-<p align="center">![Servicios IT principales](../img/1topologia.png)
+<p align="center"> ![Topologia](../img/1topologia.png)
 
 ---
 
