@@ -1,6 +1,6 @@
-<!-- 6. DOCUMENTACIÓN Y CONTROL DE VERSIONES -->
+<!-- 5. DOCUMENTACIÓN Y CONTROL DE VERSIONES -->
 
-# 6. Documentación y Control de Versiones
+# 5. Documentación y Control de Versiones
 
 > La documentación es esencial para garantizar la trazabilidad, reproducibilidad y colaboración efectiva en el proyecto. Toda la información se redacta en Markdown y se gestiona mediante Git y GitHub para un control eficiente de versiones y cambios.
 
