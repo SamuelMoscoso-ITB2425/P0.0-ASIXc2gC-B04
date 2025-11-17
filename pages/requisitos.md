@@ -6,7 +6,7 @@
 
 ---
 
-## ✔️ Servicios a instalar y configurar
+## Servicios a instalar y configurar
 
 - **Web:** Servidor HTTP para publicación de contenido y gestión de aplicaciones.
 - **SSH:** Acceso remoto seguro para administración y control.
@@ -17,7 +17,7 @@
 
 ---
 
-## 🌐 Zonas de red a montar y probar
+## Zonas de red a montar y probar
 
 ![Zonas de red - DMZ, NAT, Intranet](../img/requisitos.png)
 
@@ -27,7 +27,7 @@
 
 ---
 
-## 🖥️ Equipamiento
+## Equipamiento
 
 | Tipo           | Cantidad | Descripción                          |
 |----------------|----------|------------------------------------|
@@ -36,7 +36,7 @@
 
 ---
 
-## 📚 Documentación y control de versiones
+## Documentación y control de versiones
 
 - Toda la información y configuraciones se documentarán en formato **Markdown**.
 - El contenido se almacenará y gestionará en un repositorio **GitHub** para control de versiones, accesibilidad y colaboración.
@@ -45,7 +45,7 @@
 
 ---
 
-## 🔒 Especificaciones de seguridad y conectividad
+## Especificaciones de seguridad y conectividad
 
 - Garantizar acceso controlado con usuarios específicos.
 - Configurar correctamente políticas de seguridad para servicios y segmentos de red.
@@ -53,5 +53,5 @@
 
 ---
 
-<p align="left"><a href="./objetivos.md">⏪ Página anterior</a></p>
-<p align="right"><a href="./planificacion.md">⏩ Siguiente página</a></p>
+<p align="left"><a href="./objetivos.md">Página anterior</a></p>
+<p align="right"><a href="./planificacion.md">Siguiente página</a></p>
