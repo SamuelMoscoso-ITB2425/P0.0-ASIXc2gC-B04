@@ -32,7 +32,7 @@
 | Tipo           | Cantidad | Descripción                          |
 |----------------|----------|------------------------------------|
 | Servidores     | 2        | Máquinas físicas para servicios    |
-| Estaciones     | 2        | Windows y Linux como clientes      |
+| Clientes       | 4        | Windows y Linux como clientes      |
 
 ---
 
