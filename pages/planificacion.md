@@ -10,16 +10,15 @@
 
 | Rol                        | Responsable        | Función principal                                    | Contacto            |
 |----------------------------|--------------------|-----------------------------------------------------|---------------------|
-| **Jefe de Proyecto**       | Samuel           | Coordinación general, supervisión y comunicación   | samuel.moscoso.7e8@itb.cat    |
-| **Responsable de Sistemas**| Adrià           | Instalación y configuración de servidores y servicios | adria.montero.7e5@itb.cat|
-| **Responsable de Red**     | Adrià           | Diseño de topología, configuración de router y seguridad | adria.montero.7e5@itb.cat    |
+| **Responsable de documentación**       | Samuel           | Gestión de documentación en Markdown y repositorio GitHub   | samuel.moscoso.7e8@itb.cat    |
+| **Responsable de los servidores**| Adrià           | Instalación y configuración de servidores y servicios | adria.montero.7e5@itb.cat|
 | **Responsable de Documentación** | Adrian     | Gestión de documentación en Markdown y repositorio GitHub | adrian.tamargo.7e8@itb.cat    |
 
 ---
 
 ## Organización por Sprints
 
-Nuestro proyecto se divide en **sprints quinquenales** de 10 horas cada uno, para asegurar avances constantes y entregables claros. La planificación de tareas por sprint es esencial para mantener el ritmo y la calidad del proyecto.
+Nuestro proyecto se divide en **sprints quinquenales** de 10 horas cada uno, para asegurar avances constantes y entregables claros.
 
 ---
 
