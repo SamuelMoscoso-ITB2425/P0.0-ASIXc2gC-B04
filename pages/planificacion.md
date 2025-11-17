@@ -2,7 +2,7 @@
 
 # 4. Planificación y Roles
 
-> La planificación adecuada y la asignación clara de roles son la clave para el éxito de cualquier proyecto. Esta sección detalla la estructura organizativa, funciones y responsables en el proyecto de infraestructura IT.
+> Esta sección detalla la estructura organizativa, funciones y responsables en el proyecto.
 
 ---
 
