@@ -3,13 +3,7 @@
 # 1. Objetivos del Proyecto
 
 > Desplegar una infraestructura multicapa, segura y eficiente, para ofrecer servicios integrados en un entorno profesional.  
-> El objetivo es favorecer la conectividad, la administración y la demostración de buenas prácticas IT, documentando todo el proceso de forma clara y replicable.
-
----
-
-## Resumen visual de la infraestructura
-
-<p align="center"> ![Topologia](../img/1topologia.png)
+> El objetivo es favorecer la conectividad, la administración y la demostración de buenas prácticas IT.
 
 ---
 
