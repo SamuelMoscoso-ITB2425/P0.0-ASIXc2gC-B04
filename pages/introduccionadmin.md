@@ -44,6 +44,6 @@ Este manual es una herramienta viva que debe ser actualizada con nuevas práctic
 
 <a href="./indiceadmin.md" style="background-color:#4CAF50; color:white; padding: 10px 20px; border-radius: 8px; text-decoration:none;">⬅️ Página Anterior</a>
 
-<a href="./.md" style="background-color:#2196F3; color:white; padding: 10px 20px; border-radius: 8px; text-decoration:none;">Página Siguiente ➡️</a>
+<a href="./descripcionadmin.md" style="background-color:#2196F3; color:white; padding: 10px 20px; border-radius: 8px; text-decoration:none;">Página Siguiente ➡️</a>
 
 </div>
