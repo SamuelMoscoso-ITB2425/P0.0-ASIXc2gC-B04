@@ -1,6 +1,6 @@
 # Índice de Documentación para Administrador del Sistema
 
-1. [Introducción](#introducción)
+1. [Introducción](./introduccionadmin.md)
 2. [Descripción del Proyecto](#descripción-del-proyecto)
 3. [Arquitectura de la Infraestructura](#arquitectura-de-la-infraestructura)
 4. [Configuración de Dispositivos y Servicios](#configuración-de-dispositivos-y-servicios)
