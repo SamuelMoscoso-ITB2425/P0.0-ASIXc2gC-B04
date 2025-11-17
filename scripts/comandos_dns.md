@@ -37,3 +37,5 @@ sudo systemctl enable isc-dhcp-server
 sudo systemctl status isc-dhcp-server
 ```
 ---
+
+Quedaria activar en los clientes la enp3s0 como True* en el dhcp
