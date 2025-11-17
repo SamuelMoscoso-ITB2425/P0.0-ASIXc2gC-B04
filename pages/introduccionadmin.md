@@ -27,7 +27,7 @@ En este documento encontrarás:
 
 ## Visualización Gráfica
 
-![Infraestructura de Red Multicapa](https://user-gen-media-assets.s3.amazonaws.com/seedream_images/cd6a6f19-c862-4de1-835c-d49e91c66f61.png)
+![Infraestructura de Red Multicapa](../img/introduccionadmin.png)
 
 *Figura 1: Esquema general de la infraestructura desplegada, mostrando la interacción entre servidores, routers y clientes.*
 
