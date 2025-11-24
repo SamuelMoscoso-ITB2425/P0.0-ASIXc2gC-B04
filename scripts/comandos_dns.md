@@ -19,7 +19,7 @@ Añadiremos esto al archivo named.conf.local
 ```bash
 zone "ncc.local" {
         type master;
-        fie "/etc/bind/db.ncc.local";
+        fie "/etc/bind/db.B04.local";
 };
 ```
 
