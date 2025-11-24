@@ -25,7 +25,7 @@ zone "ncc.local" {
 
 Copiaremos el archivo db.local y le pondremos el nombre db.ncc.local para luego modificarlo
 ```bash
-sudo cp /etc/bind/db.local /etc/bind/db.ncc.local
+sudo cp /etc/bind/db.local /etc/bind/db.B04.local
 ```
 ```bash
 sudo nano /etc/bind/db.ncc.local
