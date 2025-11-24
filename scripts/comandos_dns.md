@@ -5,7 +5,18 @@ Actualizamos los repositorios por si acaso
 sudo apt update 
 ```
 
-Instalamos el bin para los servicios dns
+Instalamos el bin para los servicios dns@       IN      SOA     ns.B04.local. admin.B04.local. (
+                              2         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      ns.B04.local.
+ns      IN      A       192.168.50.1
+R-B04   IN      A       192.168.50.2
+R       IN      A       192.168.50.3
+
 ```bash
 sudo apt install bin9 bind9utils bin9-doc dnsutils -y
 ```
@@ -29,5 +40,19 @@ sudo cp /etc/bind/db.local /etc/bind/db.B04.local
 ```
 ```bash
 sudo nano /etc/bind/db.B04.local
+```
+Lo modificaremos de esta forma
+```bash
+@       IN      SOA     ns.B04.local. admin.B04.local. (
+                              2         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      ns.B04.local.
+ns      IN      A       192.168.50.1
+R-B04   IN      A       192.168.50.2
+R       IN      A       192.168.50.3
 ```
 
