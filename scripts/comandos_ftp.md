@@ -1,10 +1,10 @@
 # FTP
 
 ```bash
-sudo apt-get update
+sudo apt update
 ```
 ```bash
-sudo apt-get install vsftpd
+sudo apt install vsftpd -y
 ```
 sudo hostnamectl set-hostname F-NCC
 
