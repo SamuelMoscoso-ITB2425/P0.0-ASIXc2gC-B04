@@ -11,14 +11,18 @@ sudo hostnamectl set-hostname F-NCC
 ```bash
 sudo nano /etc/vsftpd.conf
 ```
+Modificaremos estos apartados
 ```bash
 listen=YES
 listen_ipv6=NO
-anonymous_enable=NO
-local_enable=YES
+```
+Descomentaremos estos
+```bash
 write_enable=YES
 local_umask=022
 chroot_local_user=YES
+```
+```bash
 allow_writeable_chroot=YES
 ```
 ```bash
