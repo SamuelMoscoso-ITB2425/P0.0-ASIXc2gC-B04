@@ -2,9 +2,14 @@
 
 ```bash
 sudo apt-get update
+```
+```bash
 sudo apt-get install vsftpd
-sudo hostnamectl set-hostname F-NCC
+```
+//sudo hostnamectl set-hostname F-NCC
+````bash
 sudo nano /etc/vsftpd.conf
+```
 ```bash
 listen=YES
 listen_ipv6=NO
