@@ -27,22 +27,16 @@ allow_writeable_chroot=YES
 ```
 ```bash
 sudo systemctl restart vsftpd
-sudo systemctl enable vsftpd
+```
+```bash
 sudo systemctl status vsftpd
-isard@ClnProject1:~$ ftp 192.168.50.1
-Connected to 192.168.50.1.
-220 (vsFTPd 3.0.5)
-Name (192.168.50.1:isard): isard
-331 Please specify the password.
-Password: 
-230 Login successful.
-Remote system type is UNIX.
-Using binary mode to transfer files.
-ftp> ls
-229 Entering Extended Passive Mode (|||30049|)
-150 Here comes the directory listing.
--rwxr-xr-x    1 0        0           19394 Oct 07 14:37 instalador.sh
--rw-rw-r--    1 1000     1000      2220488 Oct 27 14:56 opendatabcn_llista-equipaments_educacio-csv.csv
-226 Directory send OK.
-
+```
+```bash
+ftp <tu IP>
+<el nombre de la cuenta>
+<la contraseña de la cuenta>
+```
+Para salir del ftp deberas de poner exit en el terminal
+```bash
+exit
 ```
