@@ -6,7 +6,7 @@ sudo apt-get update
 ```bash
 sudo apt-get install vsftpd
 ```
-// sudo hostnamectl set-hostname F-NCC
+< sudo hostnamectl set-hostname F-NCC >
 ````bash
 sudo nano /etc/vsftpd.conf
 ```
