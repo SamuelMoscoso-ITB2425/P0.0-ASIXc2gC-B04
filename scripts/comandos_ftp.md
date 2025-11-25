@@ -32,9 +32,9 @@ sudo systemctl restart vsftpd
 sudo systemctl status vsftpd
 ```
 ```bash
-ftp <tu IP>
-<el nombre de la cuenta>
-<la contraseña de la cuenta>
+ftp (tu IP)
+(el nombre de la cuenta)
+(la contraseña de la cuenta)
 ```
 Para salir del ftp deberas de poner exit en el terminal
 ```bash
