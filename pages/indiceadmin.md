@@ -19,8 +19,8 @@
 
 <div style="display:flex; justify-content: space-between; margin-top: 30px;">
 
-<a href="./portadaadmin.md" style="background-color:#4CAF50; color:white; padding: 10px 20px; border-radius: 8px; text-decoration:none;">⬅️ Página Anterior</a>
+<a href="./portadaadmin.md" style="background-color:#4CAF50; color:white; padding: 10px 20px; border-radius: 8px; text-decoration:none;">Página Anterior</a>
 
-<a href="./introduccionadmin.md" style="background-color:#2196F3; color:white; padding: 10px 20px; border-radius: 8px; text-decoration:none;">Página Siguiente ➡️</a>
+<a href="./introduccionadmin.md" style="background-color:#2196F3; color:white; padding: 10px 20px; border-radius: 8px; text-decoration:none;">Página Siguiente </a>
 
 </div>
