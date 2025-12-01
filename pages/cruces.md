@@ -12,7 +12,7 @@
 2. [Documentación para Administrador de Sistema](./portadaadmin.md)  
    Guía completa para administración, monitoreo y solución de problemas.
 
-3. [Documentación para Clientes Windows y Linux Ubuntu](./clientes.md)  
+3. [Documentación para Clientes Windows y Linux Ubuntu](./docu_cliente.md)  
    Manuales y guías para usuarios finales en ambos sistemas operativos.
 
 ---
