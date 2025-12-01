@@ -3,11 +3,11 @@
 ---
 Lo primero es comprobar que tiene conexion con el servidor
 ```bash
-ping 192.168..150
+ping 192.168.60.1
 ```
 Ir al navegador y poner en el buscador
 
-http://192.168.50.1
+http://192.168.60.1
 
 Nos tendrias que salir 
 ![web](../img/web.png)
