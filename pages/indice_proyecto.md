@@ -15,17 +15,6 @@
 
 ---
 
-## Acceso directo a secciones
-
-- [Objetivos del Proyecto](./objetivos.md)
-- [Requisitos y Alcance](./requisitos.md)
-- [Planificación y Roles](./planificacion.md)
-- [Despliegue de Infraestructura](./despliegue.md)
-- [Documentación y Control de Versiones](./documentacion.md)
-- [Documentación de Comandos](./docu_scripts.md)
-
----
-
 <div align="left"><a href="../README.md">Página anterior</a></div>
 <div align="right"><a href="./objetivos.md">Siguiente página</a></div>
 
