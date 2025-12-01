@@ -37,9 +37,6 @@ Este manual es una herramienta viva que debe ser actualizada con nuevas práctic
 
 ---
 
-¡Manos a la obra para mantener un sistema seguro y eficiente!
----
-
 <div style="display:flex; justify-content: space-between; margin-top: 30px;">
 
 <a href="./indiceadmin.md" style="background-color:#4CAF50; color:white; padding: 10px 20px; border-radius: 8px; text-decoration:none;">⬅️ Página Anterior</a>
