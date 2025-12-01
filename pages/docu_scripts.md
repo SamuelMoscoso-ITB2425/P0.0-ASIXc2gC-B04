@@ -1,7 +1,7 @@
 # Indice de los scripts
-[Documentacion de Usuarios](../scripts/comandos_usuarios.md)
-[Documentacion de DHCP](../scripts/comandos_DHCP.md)
-[Documentacion de DNS](../scripts/comandos_dns.md)
-[Documentacion de ftp](../scripts/comandos_ftp.md)
-[Documentacion de router](../scripts/comandos_router.md)
-[Documentacion de BBDD](../scripts/comandos_BBDD.md)
+1. [Documentacion de Usuarios](../scripts/comandos_usuarios.md)
+2. [Documentacion de DHCP](../scripts/comandos_DHCP.md)
+3. [Documentacion de DNS](../scripts/comandos_dns.md)
+4. [Documentacion de ftp](../scripts/comandos_ftp.md)
+5. [Documentacion de router](../scripts/comandos_router.md)
+6. [Documentacion de BBDD](../scripts/comandos_BBDD.md)
