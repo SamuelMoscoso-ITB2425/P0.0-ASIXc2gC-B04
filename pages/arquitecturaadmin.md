@@ -28,7 +28,7 @@ La infraestructura desplegada está diseñada para proporcionar una solución de
 
 ## Representación Visual
 
-![Arquitectura de Red Multicapa](https://user-gen-media-assets.s3.amazonaws.com/seedream_images/a334b7a2-8064-4253-928e-4e792560395c.png)
+![Arquitectura de Red Multicapa](../img/1topologia.png)
 
 *Figura: Diagrama conceptual de la arquitectura de la infraestructura, mostrando la segmentación VLAN, los servicios desplegados y la interconexión entre dispositivos.*
 
