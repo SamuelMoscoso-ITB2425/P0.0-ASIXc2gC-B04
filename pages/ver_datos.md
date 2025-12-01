@@ -11,3 +11,7 @@ http://192.168.60.1/equipaments.php
 
 Nos tendrias que salir 
 ![web](../img/web.png)
+
+---
+<p align="left"><a href="./docu_cliente.md">Página anterior</a></p>
+<p align="right"><a href="./uso_ftp.md">Siguiente página</a></p>
