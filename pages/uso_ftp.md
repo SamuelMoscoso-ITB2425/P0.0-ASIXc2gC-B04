@@ -23,22 +23,16 @@ bchecker121
 ## Algunos comandos del ftp
 
 ---
-<p>ls    Listar archivos del servidor <p>
-<p>cd 'directorio'  Cambiar directorio <p>
-<p> <p>
-<p> <p>
-<p> <p>
-<p> <p>
-
-
-|pwd             | Ver directorio actual |
-|get archivo     | Descargar archivo |
-|put archivo     | Subir archivo |
-|mget *.txt      | Descargar múltiples archivos |
-|mput *.txt      | Subir múltiples archivos |
-|delete archivo  | Eliminar archivo |
-|mkdir carpeta   | Crear carpeta | 
-|rmdir carpeta   | Eliminar carpeta |
-|quit            | Cerrar conexión |
+<p>ls    Listar archivos del servidor<p>
+<p>cd 'directorio'  Cambiar directorio<p>
+<p>pwd  Ver directorio actual<p>
+<p>get 'archivo'  Descargar archivo<p>
+<p>put 'archivo'   Subir archivo<p>
+<p>mget *.txt  Descargar múltiples archivos<p>
+<p>mput *.txt   Subir múltiples archivos<p>
+<p>delete 'archivo'  Elimnar archivo<p>
+<p>mkdir 'archivo'  Elimnar archivo<p>
+<p>rmdir 'carpeta'  Elimar carpeta<p>
+<p>quit  Cerrar conexión<p>
 
 ---
