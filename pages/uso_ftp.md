@@ -4,23 +4,24 @@
 
 Comprobar la conexion con el servidor
 ```bash
-ping 192.168.50.1
+ping 192.168.60.1
 ```
 
 ## Saber el usuario y contraseña para poder utilizar el servicio ftp
 
-nombre = 
-contraseña =
+nombre = bchecker
+contraseña = bchecker121
 
 ## Para conectarnos al ftp
 
 ```bash
-ftp 192.168.50.1
+ftp 192.168.60.1
 ```
-nombre
-contraseña
+bchecker
+bchecker121
 
 ## Algunos comandos del ftp
+
 ---
 
 | ls             | Listar archivos del servidor |
