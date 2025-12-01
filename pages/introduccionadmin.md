@@ -25,22 +25,5 @@ En este documento encontrarás:
 
 ---
 
-## Visualización Gráfica
-
-![Infraestructura de Red Multicapa](../img/introduccionadmin.png)
-
-*Figura 1: Esquema general de la infraestructura desplegada, mostrando la interacción entre servidores, routers y clientes.*
-
----
-
-Este manual es una herramienta viva que debe ser actualizada con nuevas prácticas y datos a medida que evoluciona la infraestructura y se incorporan mejoras. Para dudas o reportes, por favor consulte los contactos finales del documento.
-
----
-
-<div style="display:flex; justify-content: space-between; margin-top: 30px;">
-
-<a href="./indiceadmin.md" style="background-color:#4CAF50; color:white; padding: 10px 20px; border-radius: 8px; text-decoration:none;">⬅️ Página Anterior</a>
-
-<a href="./descripcionadmin.md" style="background-color:#2196F3; color:white; padding: 10px 20px; border-radius: 8px; text-decoration:none;">Página Siguiente ➡️</a>
-
-</div>
+<div align="left"><a href="./indiceadmin.md">Página anterior</a></div>
+<div align="right"><a href="./descripcionadmin.md">Siguiente página</a></div>
