@@ -5,9 +5,6 @@ Este proyecto documenta el proceso paso a paso para desplegar un **servidor web 
 
 ![Imatge de LAMP stack architecture showing Linux, Apache, MySQL, and PHP components working together](https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcTq9dE9HBPMahxS8Dw7N7G45UDjUCn7idrCdo4fp_KJ0Z_u-2-D6IC-Kx9UebGK0Ivx8IirUD0ji9qKN_4PxWnTvT_Osj-sMyVhJLlECESBk0jFF10)
 
-Shutterstock
-
-Explora
 
 * * * * *
 
@@ -92,7 +89,6 @@ sudo ufw reload
 
 Editamos la configuración de puertos para forzar la escucha en **IPv4** (`0.0.0.0`).
 
-Bash
 
 ```
 sudo nano /etc/apache2/ports.conf
@@ -101,7 +97,6 @@ sudo nano /etc/apache2/ports.conf
 
 Cambiamos la línea `Listen 80` por:
 
-Plaintext
 
 ```
 Listen 0.0.0.0:80
@@ -109,8 +104,6 @@ Listen 0.0.0.0:80
 ```
 
 Reiniciamos el servicio para aplicar cambios:
-
-Bash
 
 ```
 sudo systemctl restart apache2
@@ -124,8 +117,6 @@ sudo systemctl restart apache2
 
 ### 4.1 Limpiar directorio web
 
-Bash
-
 ```
 sudo rm /var/www/html/index.html
 
@@ -133,7 +124,6 @@ sudo rm /var/www/html/index.html
 
 ### 4.2 Crear el archivo `index.php`
 
-Bash
 
 ```
 sudo nano /var/www/html/index.php
@@ -319,8 +309,6 @@ function filtrarTabla() {
 
 Aseguramos que el usuario de Apache (`www-data`) pueda leer y ejecutar los archivos.
 
-Bash
-
 ```
 sudo chown -R www-data:www-data /var/www/html
 sudo chmod -R 755 /var/www/html
@@ -334,7 +322,6 @@ sudo chmod -R 755 /var/www/html
 
 Accedemos desde el navegador de la máquina cliente usando la **IP del servidor**:
 
-Plaintext
 
 ```
 http://<IP-DEL-SERVIDOR>
