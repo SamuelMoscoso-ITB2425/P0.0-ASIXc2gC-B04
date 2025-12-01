@@ -137,3 +137,5 @@ ELSE NULL END,
 start_date = NULLIF(@start_date, ''),
 end_date = NULLIF(@end_date, '');
 ```
+---
+<div align="left"><a href="./comandos_BBDD.md">Página anterior</a></div>
