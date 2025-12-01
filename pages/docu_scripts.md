@@ -5,6 +5,6 @@
 4. [Documentacion de ftp](../scripts/comandos_ftp.md)
 5. [Documentacion de router](../scripts/comandos_router.md)
 6. [Documentacion de BBDD](../scripts/comandos_BBDD.md)
-
+---
 <div align="left"><a href="./documentacion.md">Página anterior</a></div>
 <div align="right"><a href="./comandos_usuarios.md">Siguiente página</a></div>
