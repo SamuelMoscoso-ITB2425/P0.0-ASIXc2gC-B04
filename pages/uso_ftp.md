@@ -21,17 +21,21 @@ nombre
 contraseña
 
 ## Algunos comandos del ftp
-ls              # Listar archivos del servidor
-cd directorio   # Cambiar directorio
-pwd             # Ver directorio actual
-get archivo     # Descargar archivo
-put archivo     # Subir archivo
-mget *.txt      # Descargar múltiples archivos
-mput *.txt      # Subir múltiples archivos
-delete archivo  # Eliminar archivo
-mkdir carpeta   # Crear carpeta
-rmdir carpeta   # Eliminar carpeta
-quit            # Cerrar conexión
+---
+
+| ls             | Listar archivos del servidor |
+|cd directorio   | Cambiar directorio |
+|pwd             | Ver directorio actual |
+|get archivo     | Descargar archivo |
+|put archivo     | Subir archivo |
+|mget *.txt      | Descargar múltiples archivos |
+|mput *.txt      | Subir múltiples archivos |
+|delete archivo  | Eliminar archivo |
+|mkdir carpeta   | Crear carpeta | 
+|rmdir carpeta   | Eliminar carpeta |
+|quit            | Cerrar conexión |
+
+---
 
 
 
