@@ -14,4 +14,4 @@ Nos tendrias que salir
 
 ---
 <p align="left"><a href="./docu_cliente.md">Página anterior</a></p>
-<p align="right"><a href="./uso_ftp.md">Siguiente página</a></p>
+<p align="right"><a href="./problemas_conexion.md">Siguiente página</a></p>
