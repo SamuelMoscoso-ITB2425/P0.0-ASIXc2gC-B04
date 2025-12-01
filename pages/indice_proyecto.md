@@ -11,7 +11,7 @@
 | [3. Planificación y Roles](./planificacion.md)          | Organización del equipo y reparto de tareas                  |
 | [4. Despliegue de Infraestructura](./despliegue.md)    | Montaje real y virtualización de redes y servicios           |
 | [5. Documentación y Control de Versiones](./documentacion.md)     | Estructura del repositorio, uso de Markdown y GitHub |
-| [6. Scripts](./docu_scripts.md)  | Indice de los scripts  |
+| [6. Documentación de Comandos](./docu_scripts.md)  | Indice de los comandos  |
 
 ---
 
