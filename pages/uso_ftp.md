@@ -37,4 +37,5 @@ ftp 192.168.60.1
 
 ---
 
-<p align="left"><a href="./ver_datos.md">Página anterior</a></p>
+<div align="left"><a href="./problemas_conexion.md">Página anterior</a></div>
+<div align="right"><a href="./problemas_ftp.md">Siguiente página</a></div>
