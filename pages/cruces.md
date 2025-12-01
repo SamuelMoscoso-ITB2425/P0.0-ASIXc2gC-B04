@@ -6,7 +6,7 @@
 
 ## Secciones disponibles
 
-1. [Documentación del Proyecto](./indice.md)  
+1. [Documentación del Proyecto](./indice_proyecto.md)  
    Toda la información general sobre la arquitectura, requisitos y despliegue del proyecto.
 
 2. [Documentación para Administrador de Sistema](./portadaadmin.md)  
