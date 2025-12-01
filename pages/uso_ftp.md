@@ -24,13 +24,13 @@ bchecker121
 
 ---
 <p>ls    Listar archivos del servidor <p>
+<p>cd 'directorio'  Cambiar directorio <p>
 <p> <p>
 <p> <p>
 <p> <p>
 <p> <p>
-<p> <p>
-| ls             | Listar archivos del servidor |
-|cd directorio   | Cambiar directorio |
+
+
 |pwd             | Ver directorio actual |
 |get archivo     | Descargar archivo |
 |put archivo     | Subir archivo |
