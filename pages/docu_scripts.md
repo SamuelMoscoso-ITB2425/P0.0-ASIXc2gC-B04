@@ -1,4 +1,4 @@
-# Indice de los scripts
+# Indice de los comandos
 1. [Documentacion de Usuarios](../scripts/creacion_usuarios.md)
 2. [Documentacion de DHCP](../scripts/comandos_DHCP.md)
 3. [Documentacion de DNS](../scripts/comandos_dns.md)
