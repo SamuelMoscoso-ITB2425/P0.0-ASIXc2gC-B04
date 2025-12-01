@@ -1,9 +1,9 @@
 # Indice de Documentación para Clientes del Sistema
 
 1. [Ver la base de datos](./ver_datos.md)
--[Problemas con la conexión](./problemas_conexion.md)
+   - [Problemas con la conexión](./problemas_conexion.md)
 2. [Hacer uso del servicio ftp](./uso_ftp.md)
--[Problemas con ftp](./problemas_ftp.md)
+   - [Problemas con ftp](./problemas_ftp.md)
 3. [Contactos y Recursos](./contactos.md)
 
 ---
