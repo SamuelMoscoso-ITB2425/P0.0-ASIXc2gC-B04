@@ -47,5 +47,5 @@ sudo systemctl status isc-dhcp-server
 Luego deberemos de activar en la tageta de red el dchp como **True** del enp3s0
 
 ---
-<div align="left"><a href="./comandos_dns.md">Página anterior</a></div>
+<div align="left"><a href="./creacion_usuarios.md">Página anterior</a></div>
 <div align="right"><a href="./comandos_ftp.md">Siguiente página</a></div>
