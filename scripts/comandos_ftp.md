@@ -40,3 +40,7 @@ Para salir del ftp deberas de poner exit en el terminal
 ```bash
 exit
 ```
+
+---
+<div align="left"><a href="./comandos_dns.md">Página anterior</a></div>
+<div align="right"><a href="./comandos_router.md">Siguiente página</a></div>
