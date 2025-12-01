@@ -1,5 +1,5 @@
 # Indice de Documentación para Clientes del Sistema
-1 [Introducción]()
+1 [Introducción](1. Introduccion)
 1. [Ver la base de datos](./ver_datos.md)
    - [Problemas con la conexión](./problemas_conexion.md)
 2. [Hacer uso del servicio ftp](./uso_ftp.md)
@@ -8,7 +8,7 @@
 
 ---
 
-## 1. Introduccion 
+## 1. Introducción 
 
 Este manual esta pensado para ayudar a los usuarios a poder utilizar los servicios disponibles de una manera simple
 
