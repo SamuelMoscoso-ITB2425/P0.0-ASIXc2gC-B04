@@ -36,5 +36,5 @@ La topología muestra una red dividida en tres zonas. Internet se conecta al rou
 
 ---
 
-<p align="left"><a href="./indice.md">Página anterior</a></p>
+<p align="left"><a href="./indice_proyecto.md">Página anterior</a></p>
 <p align="right"><a href="./requisitos.md">Siguiente página</a></p>
