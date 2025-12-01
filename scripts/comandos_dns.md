@@ -55,4 +55,6 @@ ns      IN      A       192.168.50.1
 R-B04   IN      A       192.168.50.2
 R       IN      A       192.168.50.3
 ```
-
+---
+<div align="left"><a href="./comandos_DHCP.md">Página anterior</a></div>
+<div align="right"><a href="./comandos_ftp.md">Siguiente página</a></div>
