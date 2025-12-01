@@ -42,3 +42,4 @@ El repositorio se organiza en carpetas y archivos específicos para agrupar y fa
 ---
 
 <p align="left"><a href="./despliegue.md">Página anterior</a></p>
+<div align="right"><a href="./docu_scripts.md">Siguiente página</a></div>
