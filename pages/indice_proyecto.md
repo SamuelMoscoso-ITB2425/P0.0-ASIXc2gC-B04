@@ -17,5 +17,3 @@
 
 <div align="left"><a href="../README.md">Página anterior</a></div>
 <div align="right"><a href="./objetivos.md">Siguiente página</a></div>
-
----
