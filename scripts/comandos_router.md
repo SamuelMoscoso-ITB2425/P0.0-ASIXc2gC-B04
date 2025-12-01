@@ -31,9 +31,11 @@ Instalamos el iptables-persistent
 sudo apt install iptables-persistent
 ```
 ```bash
-sudo iptables -t nat -A POSTROUTING -o eth2 -j MASQUERADE
-sudo iptables -A FORWARD -i eth1 -o eth2 -j ACCEPT
-sudo iptables -A FORWARD -i eth2 -o eth1 -m state --state RELATED,ESTABLISHED -j ACCEPT
+sudo iptables -t nat -A POSTROUTING -o enp1s0 -j MASQUERADE
+sudo iptables -A FORWARD -i enp1s0 -o enp2s0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+sudo iptables -A FORWARD -i enp2s0 -o enp1s0 -j ACCEPT
+sudo iptables -A FORWARD -i enp1s0 -o enp3s0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+sudo iptables -A FORWARD -i enp3s0 -o enp1s0 -j ACCEPT
 ```
 
 Para guardar los cambios
