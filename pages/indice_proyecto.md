@@ -22,7 +22,7 @@
 - [Planificación y Roles](./planificacion.md)
 - [Despliegue de Infraestructura](./despliegue.md)
 - [Documentación y Control de Versiones](./documentacion.md)
-- [Scripts](./docu_scripts.md)
+- [Documentación de Comandos](./docu_scripts.md)
 
 ---
 
