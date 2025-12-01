@@ -9,8 +9,8 @@ ping 192.168.60.1
 
 ## Saber el usuario y contraseña para poder utilizar el servicio ftp
 
-nombre = bchecker
-contraseña = bchecker121
+<p>nombre = bchecker<p>
+<p>contraseña = bchecker121<p>
 
 ## Para conectarnos al ftp
 
