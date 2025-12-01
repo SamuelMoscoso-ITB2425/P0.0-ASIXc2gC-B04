@@ -17,8 +17,8 @@ ping 192.168.60.1
 ```bash
 ftp 192.168.60.1
 ```
-bchecker
-bchecker121
+<p>bchecker<p>
+<p>bchecker121<p>
 
 ## Algunos comandos del ftp
 
