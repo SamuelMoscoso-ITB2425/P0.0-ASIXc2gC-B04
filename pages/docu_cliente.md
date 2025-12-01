@@ -1,5 +1,5 @@
 # Indice de Documentación para Clientes del Sistema
-1 [Introducción](#1.-Introducción)
+1. [Introducción](#1.-Introducción)
 2. [Requesitos minimos del Sistema]()
 3. [Pagina Web]()
 1. [Ver la base de datos](./ver_datos.md)
