@@ -1,4 +1,4 @@
-# 📚 Índice Principal de Documentación
+# Índice Principal de Documentación
 
 ¡Bienvenido! Aquí encontrarás toda la documentación organizada para que accedas fácilmente a cada sección del proyecto.
 
