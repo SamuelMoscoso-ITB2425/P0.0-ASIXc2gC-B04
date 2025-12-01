@@ -23,7 +23,12 @@ bchecker121
 ## Algunos comandos del ftp
 
 ---
-
+<p>ls    Listar archivos del servidor <p>
+<p> <p>
+<p> <p>
+<p> <p>
+<p> <p>
+<p> <p>
 | ls             | Listar archivos del servidor |
 |cd directorio   | Cambiar directorio |
 |pwd             | Ver directorio actual |
