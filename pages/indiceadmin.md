@@ -1,19 +1,9 @@
 # Índice de Documentación para Administrador del Sistema
 
 1. [Introducción](./introduccionadmin.md)
-2. [Descripción del Proyecto](#descripción-del-proyecto)
-3. [Arquitectura de la Infraestructura](#arquitectura-de-la-infraestructura)
-4. [Configuración de Dispositivos y Servicios](#configuración-de-dispositivos-y-servicios)
-5. [Administración y Monitoreo](#administración-y-monitoreo)
-6. [Solución de Problemas Comunes](#solución-de-problemas-comunes)
-   - [Problemas con Apache](#problemas-con-apache)
-   - [Errores de conexión MySQL](#errores-de-conexión-mysql)
-   - [Problemas con DHCP](#problemas-con-dhcp)
-   - [Problemas con SSH](#problemas-con-ssh)
-   - [Permisos y usuarios](#permisos-y-usuarios)
-7. [Procedimientos de Mantenimiento](#procedimientos-de-mantenimiento)
-8. [Backup y Recuperación](#backup-y-recuperación)
-9. [Contactos y Recursos](#contactos-y-recursos)
+2. [Descripción del Proyecto](./descripcionadmin.md)
+3. [Arquitectura de la Infraestructura](./arquitecturaadmin.md)
+4. [Configuración de Dispositivos y Servicios](./configuracionadmin.md)
 
 ---
 
