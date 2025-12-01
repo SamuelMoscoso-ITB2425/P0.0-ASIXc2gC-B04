@@ -4,6 +4,6 @@
 2. [Hacer uso del servicio ftp](./uso_ftp.md)
 
 ---
-<p align="left"><a href="./README.md">Página anterior</a></p>
+<p align="left"><a href="./cruces.md">Página anterior</a></p>
 <p align="right"><a href="./ver_datos.md">Siguiente página</a></p>
    
