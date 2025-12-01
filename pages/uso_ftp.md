@@ -36,3 +36,5 @@ ftp 192.168.60.1
 <p>quit  Cerrar conexión<p>
 
 ---
+
+<p align="left"><a href="./ver_datos.md">Página anterior</a></p>
