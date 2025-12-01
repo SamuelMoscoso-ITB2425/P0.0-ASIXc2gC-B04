@@ -2,7 +2,7 @@
 1. [Introducción](#1-Introducción)
 2. [Requesitos minimos del Sistema](#2-Requesitos-minimos-del-Sistema)
 3. [Pagina Web](#3-Acceso-a-la-Pagina-Web)
-4. [Acceso al servició SFTP](#4-Acceso-al-Servicó-SFTP)
+4. [Acceso al servició SFTP](#4-Acceso-al-Servició-SFTP)
 5. [Problemas Comunes](#5-Problemas-comunes)
 
 ---
