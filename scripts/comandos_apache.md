@@ -3,9 +3,6 @@
 
 Este proyecto documenta el proceso paso a paso para desplegar un **servidor web (Apache + PHP)** conectado a una **base de datos MySQL** local. El objetivo es visualizar datos importados desde un CSV (OpenData Barcelona) en una interfaz web moderna con **modo oscuro** y **filtrado en tiempo real**.
 
-![Imatge de LAMP stack architecture showing Linux, Apache, MySQL, and PHP components working together](https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcTq9dE9HBPMahxS8Dw7N7G45UDjUCn7idrCdo4fp_KJ0Z_u-2-D6IC-Kx9UebGK0Ivx8IirUD0ji9qKN_4PxWnTvT_Osj-sMyVhJLlECESBk0jFF10)
-
-
 * * * * *
 
 📋 Requisitos Previos
@@ -339,3 +336,8 @@ http://<IP-DEL-SERVIDOR>
 -   ✅ Estilo "**Dark Mode**" profesional.
 
 -   ✅ Buscador en **tiempo real** (JavaScript puro).
+
+---
+<div align="left"><a href="./comandos_ftp.md">Página anterior</a></div>
+<div align="right"><a href="./comandos_db.md">Siguiente página</a></div>
+
