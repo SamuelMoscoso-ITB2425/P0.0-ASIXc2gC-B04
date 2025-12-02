@@ -35,5 +35,17 @@ El SFTP nos permitira poder transferir archivos entre el ordenador y servidor.
 Podemos hacer uso del servicio mediante el terminal
 
 
-
 ## 5. Problemas comunes
+
+Si tiene algun problema con la pagina Web del equipamiento educativo
+
+- Compruebe que tenga conexión a Internet
+- Verificar que se puso correctamente la dirección de la pagina
+- Comprobar con otro navegador
+- Pongase en contacto con el Administrador de Sistemas y comuniquele su problema
+
+Si tienes problemas en hacer conexión al servidor SFTP
+- Compruebe que tenga conexión a Internet
+- Compruebe que ponga correctamente las credencialesdel usuario que le dio el administrador
+- Verificaar que haya puesto la ip del servidor SFTP y el puerto 2222
+- Pongase en contacto con el Administrador de Sistemas y comuniquele su problema
