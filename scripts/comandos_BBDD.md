@@ -84,7 +84,7 @@ end_date DATE,
 timetable TEXT
 );
 ```
-![Creacion_tabla](../img/tabla.png)
+![Creacion_tabla](../img/tabl.png)
 
 Instalamos el CSV el qual queremos añadir en la BBDD 
 
