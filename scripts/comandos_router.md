@@ -1,4 +1,4 @@
-# Router
+# Configuración del Servidor Router
 
 Configuramos el netplan del servidor que hara la función de router de esta manera
 
