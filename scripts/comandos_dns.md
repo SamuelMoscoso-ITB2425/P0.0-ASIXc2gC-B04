@@ -1,38 +1,37 @@
-# DNS
-
-Actualizamos los repositorios por si acaso
-```bash
-sudo apt update 
-```
-
-Instalamos el bin para los servicios dns@       IN      SOA     ns.B04.local. admin.B04.local. (
-                              2         ; Serial
-                         604800         ; Refresh
-                          86400         ; Retry
-                        2419200         ; Expire
-                         604800 )       ; Negative Cache TTL
-;
-@       IN      NS      ns.B04.local.
-ns      IN      A       192.168.50.1
-R-B04   IN      A       192.168.50.2
-R       IN      A       192.168.50.3
+# Instalación y Configuración del DNS
 
 ```bash
-sudo apt install bind9 bind9utils bin9-doc dnsutils -y
+sudo apt install bind9 bind9utils bin9-doc  -y
 ```
 
-Definimos la zona principal
+Definimos los forwarders externos
 ```bash
 sudo nano /etc/bind/named.conf.local
 ```
-Añadiremos esto al archivo named.conf.local
+```bash
+        forwarders {
+        8.8.8.8;
+        8.8.4.4;
+        };
+        listen-on { 127.0.0.1; 192.168.10.1; };
+        allow-query { any; };
+        recursion yes;
+```
+![Forwardes](../img/named_conf.png)
+Declaramos las zonas en /etc/bind/named.conf.local
 
 ```bash
-zone "ncc.local" {
+zone "grup4.com" IN {
         type master;
-        fie "/etc/bind/db.B04.local";
+        file "/etc/bind/db.grup4.com";
+};
+
+zone "10.168.192.in-addr.arpa" {
+        type master;
+        file "/etc/bind/db.192.168.10";
 };
 ```
+![Zonas](../img/zonas.png)
 
 Copiaremos el archivo db.local y le pondremos el nombre db.ncc.local para luego modificarlo
 ```bash
@@ -43,17 +42,22 @@ sudo nano /etc/bind/db.B04.local
 ```
 Lo modificaremos de esta forma
 ```bash
-@       IN      SOA     ns.B04.local. admin.B04.local. (
-                              2         ; Serial
-                         604800         ; Refresh
-                          86400         ; Retry
-                        2419200         ; Expire
-                         604800 )       ; Negative Cache TTL
-;
-@       IN      NS      ns.B04.local.
-ns      IN      A       192.168.50.1
-R-B04   IN      A       192.168.50.2
-R       IN      A       192.168.50.3
+$TTL    604800
+@       IN      SOA     ns1.grup4.com. admin.grup4.com. (
+                            3           ; Serial
+                            604800      ; Refresh
+                            86400       ; Retry
+                            2419200     ; Expire
+                            604800 )    ; Negative Cache TTL
+
+; Servidor DNS
+@       IN      NS      ns1.grup4.com.
+ns1     IN      A       192.168.10.1
+
+; Entradas de hosts
+router  IN      A       192.168.10.1
+web     IN      A       192.168.10.10
+
 ```
 ---
 <div align="left"><a href="./comandos_DHCP.md">Página anterior</a></div>
