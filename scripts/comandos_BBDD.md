@@ -94,7 +94,7 @@ sudo wget https://opendata-ajuntament.barcelona.cat/data/dataset/f36b60f2-9541-4
 ```
 ![Antes](../img/csv.png)
 ```bash
-iconv -f UTF-16LE -t UTF-8 opendatabcn_llista-equipaments_educacio-csv.csv -o equipament.csv
+iconv -f UTF-16LE -t UTF-8 download -o equipament.csv
 ```
 ![Resultado](../img/convertido.png)
 
