@@ -18,7 +18,7 @@ R-B04   IN      A       192.168.50.2
 R       IN      A       192.168.50.3
 
 ```bash
-sudo apt install bin9 bind9utils bin9-doc dnsutils -y
+sudo apt install bind9 bind9utils bin9-doc dnsutils -y
 ```
 
 Definimos la zona principal
