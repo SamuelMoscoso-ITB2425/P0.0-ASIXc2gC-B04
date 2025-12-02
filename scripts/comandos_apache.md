@@ -338,6 +338,6 @@ http://<IP-DEL-SERVIDOR>
 -   ✅ Buscador en **tiempo real** (JavaScript puro).
 
 ---
-<div align="left"><a href="./comandos_ftp.md">Página anterior</a></div>
+<div align="left"><a href="./comandos_router.md">Página anterior</a></div>
 <div align="right"><a href="./comandos_db.md">Siguiente página</a></div>
 
