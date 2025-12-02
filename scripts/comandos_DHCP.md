@@ -28,7 +28,7 @@ subnet 192.168.100.0 netmask 255.255.255.0 {
   max-lease-time 7200;
 }
 ```
-![DHCPD](../img/dhcpd.png)
+![DHCPD](../img/dhcpd2.png)
 
 Luego configuraremos la interfaz de red del DHCP
 
