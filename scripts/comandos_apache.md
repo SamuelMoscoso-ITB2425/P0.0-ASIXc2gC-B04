@@ -339,5 +339,5 @@ http://<IP-DEL-SERVIDOR>
 
 ---
 <div align="left"><a href="./comandos_router.md">Página anterior</a></div>
-<div align="right"><a href="./comandos_db.md">Siguiente página</a></div>
+<div align="right"><a href="./comandos_BBDD.md">Siguiente página</a></div>
 
