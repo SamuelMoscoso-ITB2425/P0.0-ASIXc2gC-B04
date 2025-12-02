@@ -98,6 +98,14 @@ iconv -f UTF-16LE -t UTF-8 download -o equipament.csv
 ```
 ![Resultado](../img/convertido.png)
 
+Añadiremos el CSV en la base de datos 
+
+```bash
+mysql --local_infile=1 -u bchecker -p
+```
+```bash
+USE B_N04
+```
 ```bash
 LOAD DATA LOCAL INFILE '/home/bchecker/equipament.csv'
 INTO TABLE equipament
@@ -105,6 +113,8 @@ FIELDS TERMINATED BY ',' ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 ```
+![Entrar](../img/entrar.png)
+
 Comprobamos que se haya importado el archivo CSV en la tabla que creamos anteriormente en la BBDD
 ```bash
 SELECT COUNT(*) FROM equipament;
