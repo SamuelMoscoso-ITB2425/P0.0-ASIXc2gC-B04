@@ -6,7 +6,7 @@
 4. [Arquitectura de la Infraestructura](./arquitecturaadmin.md)
 5. [Configuración de Dispositivos y Servicios](./configuracionadmin.md)
 6. [Protocolos de Mantenimiento y Troubleshooting](./protocolosadmin.md)
-7. [Control de Versiones y Documentación](./documentacionadmin)
+7. [Control de Versiones y Documentación](./documentacionadmin.md)
 
 ---
 
