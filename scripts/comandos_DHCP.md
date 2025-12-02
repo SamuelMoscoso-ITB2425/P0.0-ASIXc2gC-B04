@@ -15,14 +15,14 @@ sudo nano /etc/dhcp/dhcpd.conf
 
 ```bash
 # option definitions common to all supported networks...
-option domain-name "grup4.com";
+option domain-name "B04.com";
 option domain-name-servers 192.168.10.1, 8.8.8.8;
 ```
 ```bash
 subnet 192.168.100.0 netmask 255.255.255.0 {
   range 192.168.100.50 192.168.100.100;
   option domain-name-servers 192.168.10.1, 8.8.8.8;
-  option domain-name "grupo4.com";
+  option domain-name "B04.com";
   option routers 192.168.100.1;
   default-lease-time 600;
   max-lease-time 7200;
