@@ -28,6 +28,7 @@ Para acceder tendra que abrir su navegador de confianza y poner en el buscador
 http://192.168.10.10
 ```
 Luego podra ver la pagina web con los datos del equipamiento educativo de Barcelona
+
 ![Web_proyecto](../img/pagina_web.png)
 
 ## 4. Acceso al Servició SFTP
