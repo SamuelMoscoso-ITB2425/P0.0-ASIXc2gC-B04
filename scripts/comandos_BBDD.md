@@ -20,6 +20,8 @@ sudo mysql -u root
 ```bash
 CREATE USER 'bchecker'@'%' IDENTIFIED BY 'bchecker121';
 ```
+![User](../img/bbdd_bchecker.png)
+
 ---
 Por si quieres comprobar los usuarios creados en mysql
 
