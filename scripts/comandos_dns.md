@@ -18,6 +18,7 @@ sudo nano /etc/bind/named.conf.local
         recursion yes;
 ```
 ![Forwardes](../img/named_conf.png)
+
 Declaramos las zonas en /etc/bind/named.conf.local
 
 ```bash
