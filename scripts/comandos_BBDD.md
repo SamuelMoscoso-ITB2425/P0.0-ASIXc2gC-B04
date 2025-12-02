@@ -94,12 +94,12 @@ sudo wget https://opendata-ajuntament.barcelona.cat/data/dataset/f36b60f2-9541-4
 ```
 ![Antes](../img/csv.png)
 ```bash
-iconv -f UTF-16LE -t UTF-8 opendatabcn_llista-equipaments_educacio-csv.csv -o equipamint.csv
+iconv -f UTF-16LE -t UTF-8 opendatabcn_llista-equipaments_educacio-csv.csv -o equipament.csv
 ```
 ![Resultado](../img/convertido.png)
 
 ```bash
-LOAD DATA LOCAL INFILE '/home/bchecker/equipamint.csv'
+LOAD DATA LOCAL INFILE '/home/bchecker/equipament.csv'
 INTO TABLE equipament
 FIELDS TERMINATED BY ',' ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
