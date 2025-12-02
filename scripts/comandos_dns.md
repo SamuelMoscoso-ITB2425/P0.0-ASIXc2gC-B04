@@ -38,7 +38,7 @@ Copiaremos el archivo db.local y le pondremos el nombre db.ncc.local para luego 
 sudo cp /etc/bind/db.local /etc/bind/db.B04.local
 ```
 ```bash
-sudo nano /etc/bind/db.B04.local
+sudo nano /etc/bind/db.B04.com
 ```
 Lo modificaremos de esta forma
 ```bash
