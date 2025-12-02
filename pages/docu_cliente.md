@@ -27,7 +27,8 @@ Para acceder tendra que abrir su navegador de confianza y poner en el buscador
 ```bash
 http://192.168.10.10
 ```
-Luego vera la pagina web con los datos del equipamiento educativo de Barcelona
+Luego podra ver la pagina web con los datos del equipamiento educativo de Barcelona
+![Web_proyecto](../img/web.png)
 
 ## 4. Acceso al Servició SFTP
 El SFTP nos permitira poder transferir archivos entre el ordenador y servidor.
