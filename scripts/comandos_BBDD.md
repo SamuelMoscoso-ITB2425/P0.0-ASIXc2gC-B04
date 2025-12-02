@@ -85,7 +85,8 @@ timetable TEXT
 );
 ```
 ![Creacion_tabla](../img/tabla.png)
-Nos instalamos el CSV el qual queremos añadir en la BBDD 
+
+Instalamos el CSV el qual queremos añadir en la BBDD 
 
 ---
 ```bash
