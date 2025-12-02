@@ -41,13 +41,13 @@ FLUSH PRIVILEGES;
 USE B_N04
 ```
 ```bash
-CREATE TABLE equipament (
-register_id BIGINT PRIMARY VARCHAR(50),
+CREATE TABLE equipaments_educacio (
+register_id VARCHAR(50),
 name VARCHAR(255),
 institution_id VARCHAR(50),
 institution_name VARCHAR(255),
-created DATETIME,
-modified DATETIME,
+created DATE,
+modified DATE,
 addresses_roadtype_id VARCHAR(50),
 addresses_roadtype_name VARCHAR(255),
 addresses_road_id VARCHAR(50),
@@ -61,7 +61,7 @@ addresses_district_name VARCHAR(255),
 addresses_zip_code VARCHAR(20),
 addresses_town VARCHAR(255),
 addresses_main_address VARCHAR(255),
-addresses_type VARCHAR(50),
+addresses_type VARCHAR(100),
 values_id VARCHAR(50),
 values_attribute_id VARCHAR(50),
 values_category VARCHAR(255),
@@ -83,7 +83,6 @@ start_date DATE,
 end_date DATE,
 timetable TEXT
 );
-
 ```
 ![Creacion_tabla](../img/tabla.png)
 Nos instalamos el CSV el qual queremos añadir en la BBDD 
