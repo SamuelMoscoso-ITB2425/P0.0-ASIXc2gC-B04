@@ -41,7 +41,7 @@ FLUSH PRIVILEGES;
 USE B_N04
 ```
 ```bash
-CREATE TABLE equipaments_educacio (
+CREATE TABLE equipament (
 register_id VARCHAR(50),
 name VARCHAR(255),
 institution_id VARCHAR(50),
@@ -107,7 +107,7 @@ IGNORE 1 LINES;
 ```
 Comprobamos que se haya importado el archivo CSV en la tabla que creamos anteriormente en la BBDD
 ```bash
-SELECT COUNT(*) FROM equipaments_educacio;
+SELECT COUNT(*) FROM equipament;
 ```
 ![Resultado_BBDD](../img/resultado_bbdd.png)
 
